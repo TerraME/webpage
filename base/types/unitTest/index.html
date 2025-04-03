@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>UnitTest - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "UnitTest";
+        var mkdocs_page_input_path = "base/types/unitTest.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">UnitTest</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assert">assert</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assertequals">assertEquals</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#asserterror">assertError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assertfile">assertFile</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assertnil">assertNil</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assertnotnil">assertNotNil</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assertsnapshot">assertSnapshot</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_7">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#asserttype">assertType</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_8">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#assertwarning">assertWarning</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_9">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#printerror">printError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_10">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">UnitTest</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="unittest">UnitTest</h1>
+<p>Type for testing packages. All its arguments are necessary only when the tests work with database access.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>host</strong>: Name of the host. See <a href="../trajectory/">CellularSpace</a>.</li>
+<li><strong>password</strong>: A password. See CellularSpace.</li>
+<li><strong>port</strong>: Number of the port. See CellularSpace.</li>
+<li><strong>source</strong>: Name of the data source. See CellularSpace.</li>
+<li><strong>user</strong>: A user name. See CellularSpace.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#assert">assert</a></td>
+<td>Check if a given value is true or if a given function works properly.</td>
+</tr>
+<tr>
+<td><a href="./#assertequals">assertEquals</a></td>
+<td>Check if two values are equal.</td>
+</tr>
+<tr>
+<td><a href="./#asserterror">assertError</a></td>
+<td>Verify if a function produces an error.</td>
+</tr>
+<tr>
+<td><a href="./#assertfile">assertFile</a></td>
+<td>Check if a given file exists and remove it.</td>
+</tr>
+<tr>
+<td><a href="./#assertnil">assertNil</a></td>
+<td>Check if a given value is nil.</td>
+</tr>
+<tr>
+<td><a href="./#assertnotnil">assertNotNil</a></td>
+<td>Check if a given value is not nil.</td>
+</tr>
+<tr>
+<td><a href="./#assertsnapshot">assertSnapshot</a></td>
+<td>Verify whether a <a href="../chart/">Chart</a> or a <a href="../map/">Map</a> has a plot similar to the one defined in the log directory.</td>
+</tr>
+<tr>
+<td><a href="./#asserttype">assertType</a></td>
+<td>Check if a value belongs to a given type.</td>
+</tr>
+<tr>
+<td><a href="./#assertwarning">assertWarning</a></td>
+<td>Verify if a function produces a warning.</td>
+</tr>
+<tr>
+<td><a href="./#printerror">printError</a></td>
+<td>Internal function to print error messages along the tests.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="assert"><strong>assert</strong></h2>
+<p>Check if a given value is true or if a given function works properly. When using any other value as argument (number, string, false, nil, etc.), it shows an error. it generates an error.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Any value.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+unitTest:assert(2 &lt; 3)</code></pre>
+<hr />
+<h2 id="assertequals"><strong>assertEquals</strong></h2>
+<p>Check if two values are equal. In this function, two tables are equal only when they are the same object (if not, they would not be equal even if they share the same internal content).  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Any value.</li>
+<li><strong>#2</strong>: Any value.</li>
+<li><strong>#3</strong>: A number indicating a maximum error tolerance. This argument is optional and can be used with numbers or strings. When using string, the tolerance is measured according to the <a href="../../functions/utils/#levenshtein">levenshtein()</a> distance. The default tolerance is zero.</li>
+<li><strong>#4</strong>: A boolean to ignore path between /'s, when comparing two strings. It automatically converts a string such as "directory/sub1/sub2/file" into "directory/file". This argument is optional and can be used only with strings. The default value is false.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+unitTest:assertEquals(3, 3)
+unitTest:assertEquals(2, 2.1, 0.2)
+unitTest:assertEquals("string [gis/data/biomassa-manaus.asc]", "string [gis/biomassa-manaus.asc]", 0, true)</code></pre>
+<hr />
+<h2 id="asserterror"><strong>assertError</strong></h2>
+<p>Verify if a function produces an error. If there is no error in the function or the error found is not the expected error then it generates an error.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A function to be tested.</li>
+<li><strong>#2</strong>: A string describing the error message that the function should produce. This string should contain only the error message, without the description of the file name where the error was produced.</li>
+<li><strong>#3</strong>: A number indicating the maximum number of characters that can be different between the error produced by the error function and the expected error message. This argument might be necessary in error messages that include information that can change from machine to machine, such as an username. The default value is zero (no discrepancy).</li>
+<li><strong>#4</strong>: A boolean to ignore path between /'s, when comparing two strings. It automatically converts a string such as "directory/sub1/sub2/file" into "directory/file". The default value is false.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+error_func = function() verify(2 &gt; 3, "wrong operator") end
+unitTest:assertError(error_func, "wrong operator")</code></pre>
+<hr />
+<h2 id="assertfile"><strong>assertFile</strong></h2>
+<p>Check if a given file exists and remove it. Repeating: The file is removed when calling this assert. If the file is a directory or does not exist then it shows an error.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A <a href="../file/">File</a> or a string with the file name.</li>
+<li><strong>#2</strong>: An optional number indicating the percentage of characters in the line that can be different. The tolerance is applied to each line of the files. The default tolerance is zero.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+os.execute("touch file.txt") -- create a file (only works in Linux and Mac)
+unitTest:assertFile("file.txt")</code></pre>
+<hr />
+<h2 id="assertnil"><strong>assertNil</strong></h2>
+<p>Check if a given value is nil. Otherwise it generates an error.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Any value.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+unitTest:assertNil()</code></pre>
+<hr />
+<h2 id="assertnotnil"><strong>assertNotNil</strong></h2>
+<p>Check if a given value is not nil. Otherwise it generates an error.  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Any value.</li>
+</ul>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+unitTest:assertNotNil(2)</code></pre>
+<hr />
+<h2 id="assertsnapshot"><strong>assertSnapshot</strong></h2>
+<p>Verify whether a <a href="../chart/">Chart</a> or a <a href="../map/">Map</a> has a plot similar to the one defined in the log directory. Note that this function cannot be used for the same file twice in the tests of a given package.  </p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Chart or a Map.</li>
+<li><strong>#2</strong>: A string with the file name in the snapshot directory. If the file does not exist then it will save the file in the snapshot directory.</li>
+<li><strong>#3</strong>: A number between 0 and 1 with the maximum difference in percentage of pixels allowed. The default value is 0.</li>
+</ul>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+cell = Cell{value = 2}
+chart = Chart{target = cell}
+unitTest:assertSnapshot(chart, "test_chart.bmp")</code></pre>
+<hr />
+<h2 id="asserttype"><strong>assertType</strong></h2>
+<p>Check if a value belongs to a given type. If not, it generates an error.  </p>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Any value.</li>
+<li><strong>#2</strong>: A string with the name of a type.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+unitTest:assertType(2, "number")</code></pre>
+<hr />
+<h2 id="assertwarning"><strong>assertWarning</strong></h2>
+<p>Verify if a function produces a warning. If there is no warning in the function or the warning found is not the expected value then it generates an error.  </p>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A function to be tested.</li>
+<li><strong>#2</strong>: A string describing the warning message that the function is expected to produce. This string should contain only the warning message, without the description of the file name where the warning was produced.</li>
+<li><strong>#3</strong>: A number indicating the maximum number of characters that can be different between the warning produced by the warning function and the expected warning. This argument might be necessary in warnings that include information that can change from machine to machine, such as an username. The default value is zero (no discrepancy).</li>
+<li><strong>#4</strong>: A boolean to ignore path between /'s, when comparing two strings. It automatically converts a string such as "c:/directory/sub1/sub2/file.txt" into "file.txt". The default value is false.</li>
+</ul>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+error_func = function() customWarning("Did you forget something?") end
+unitTest:assertWarning(error_func, "Did you forget something?")</code></pre>
+<hr />
+<h2 id="printerror"><strong>printError</strong></h2>
+<p>Internal function to print error messages along the tests.  </p>
+<h3 id="arguments_10">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the error message.</li>
+</ul>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>unitTest = UnitTest{}
+unitTest:printError("msg")</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../trajectory/" class="btn btn-neutral float-left" title="Trajectory"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../visualTable/" class="btn btn-neutral float-right" title="VisualTable">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../trajectory/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../visualTable/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

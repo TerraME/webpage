@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Package - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Package";
+        var mkdocs_page_input_path = "base/functions/package.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Functions</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../os/">Os</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Package</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filepath">filePath</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filesbyextension">filesByExtension</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getpackage">getPackage</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#import">import</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isloaded">isLoaded</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#packageinfo">packageInfo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Functions</li>
+      <li class="breadcrumb-item active">Package</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="package">Package</h1>
+<p>Functions to work with packages in TerraME.</p>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#filepath">filePath</a></td>
+<td>Return a <a href="../../types/file/">File</a> storing the full path of a file within a given package.</td>
+</tr>
+<tr>
+<td><a href="./#filesbyextension">filesByExtension</a></td>
+<td>Return a table with the files of a package that have a given extension.</td>
+</tr>
+<tr>
+<td><a href="./#getpackage">getPackage</a></td>
+<td>Return a table with the content of a given package.</td>
+</tr>
+<tr>
+<td><a href="./#import">import</a></td>
+<td>Load a given package.</td>
+</tr>
+<tr>
+<td><a href="./#isloaded">isLoaded</a></td>
+<td>Return whether a given package is loaded.</td>
+</tr>
+<tr>
+<td><a href="./#packageinfo">packageInfo</a></td>
+<td>Return the description of a package.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="filepath"><strong>filePath</strong></h2>
+<p>Return a <a href="../../types/file/">File</a> storing the full path of a file within a given package. The file must be inside the directory data of package.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the file.</li>
+<li><strong>#2</strong>: A string with the name of the package. As default, it uses base package.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{file = filePath("simple.pgm")}</code></pre>
+<hr />
+<h2 id="filesbyextension"><strong>filesByExtension</strong></h2>
+<p>Return a table with the files of a package that have a given extension.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the package.</li>
+<li><strong>#2</strong>: A string with the extension.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>filesByExtension("base", "csv")</code></pre>
+<hr />
+<h2 id="getpackage"><strong>getPackage</strong></h2>
+<p>Return a table with the content of a given package. If the package is not installed, it verifies if the package is in the current directory.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A package name.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>base = getPackage("base")
+cs = base.CellularSpace{xdim = 10}</code></pre>
+<hr />
+<h2 id="import"><strong>import</strong></h2>
+<p>Load a given package. If the package is not installed, it verifies if the package is available in the current directory. It shows a warning if trying to load a package that was already loaded. In this case, the package will not be loaded again. See #2 below for a different procedure.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A package name.</li>
+<li><strong>#2</strong>: A boolean value indicating whether TerraME should load the package even if it was already loaded (default is false). In this case, it also avoids a warning indicating that the package was already loaded.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>import("calibration")</code></pre>
+<hr />
+<h2 id="isloaded"><strong>isLoaded</strong></h2>
+<p>Return whether a given package is loaded.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the package.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>if isLoaded("base") then
+    print("is loaded")
+end</code></pre>
+<hr />
+<h2 id="packageinfo"><strong>packageInfo</strong></h2>
+<p>Return the description of a package. This function tries to find the package in the TerraME installation directory. If it does not exist then it checks wether the package is available in the current directory. If the package does not exist then it stops with an error. Otherwise, it reads file description.lua and returns the following string attributes.  </p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>authors</td>
+<td>Name of the author(s) of the package.</td>
+</tr>
+<tr>
+<td>contact</td>
+<td>E-mail of one or more authors.</td>
+</tr>
+<tr>
+<td>content</td>
+<td>A description of the package.</td>
+</tr>
+<tr>
+<td>data</td>
+<td>A <a href="../../types/directory/">Directory</a> with the path to the data directory of the package. This attribute is added by this function as it does not exist in description.lua.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Date of the current version.</td>
+</tr>
+<tr>
+<td>depends</td>
+<td>A string containing a comma-separated list of package names which this package depends on.</td>
+</tr>
+<tr>
+<td>tdepends</td>
+<td>A table describing the dependencies of the package using internal tables containing three values: operator (a string), package (a string), and version (a vector of numbers).</td>
+</tr>
+<tr>
+<td>license</td>
+<td>Name of the package's license.</td>
+</tr>
+<tr>
+<td>package</td>
+<td>Name of the package.</td>
+</tr>
+<tr>
+<td>path</td>
+<td>A <a href="../../types/directory/">Directory</a> with the path where the package is stored in the computer.</td>
+</tr>
+<tr>
+<td>title</td>
+<td>Optional title for the HTML documentation of the package.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>An optional value with the webpage of the package.</td>
+</tr>
+<tr>
+<td>version</td>
+<td>Current version of the package, in the form [.]*. For example: 1, 0.2, 2.5.2.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the package. If nil, packageInfo will return the description of TerraME.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>str = packageInfo().version
+print(str)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../os/" class="btn btn-neutral float-left" title="Os"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../utils/" class="btn btn-neutral float-right" title="Utils">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../os/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../utils/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

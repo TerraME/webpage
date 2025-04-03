@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Directory - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Directory";
+        var mkdocs_page_input_path = "base/types/directory.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Directory</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">attributes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#create">create</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete">delete</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exists">exists</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#list">list</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name">name</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#path">path</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#relativepath">relativePath</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setcurrentdir">setCurrentDir</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">..</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Directory</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="directory">Directory</h1>
+<p>An abstract representation of a directory. When creating an instance of a Directory, it does not mean that such directory will be created. It only verifies if the directory has a valid name. Directory also converts backslashes into slashes to make sure paths are represented in the same way in different operational systems. This type provides a set of operations to handle directories, such as to verify if it exists, create, and remove.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>name</strong>: A mandatory string with the directory name. It can also be a <a href="../file/">File</a>. In this case, its value will be <a href="../file/#path">File:path()</a>. This argument can be used as a first argument in a call to Directory without named arguments, as in the example below.</li>
+<li><strong>tmp</strong>: An optional boolean value indicating whether the directory should be temporary. The default value is false. When creating a temporary directory, the end of its name must contain X's, which are going to be replaced by random alphanumerical values in order to guarantee that the created directory will not replace a previous one.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>dir = Directory("/my/path/my_dir")
+
+tmpDir = Directory{
+   name = "mytmpdir_XXX",
+   tmp = true
+}
+
+print(tmpDir)</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#attributes">attributes</a></td>
+<td>Return a table with the file attributes corresponding to filepath (or nil followed by an error message in case of error).</td>
+</tr>
+<tr>
+<td><a href="./#create">create</a></td>
+<td>Create the directory.</td>
+</tr>
+<tr>
+<td><a href="./#delete">delete</a></td>
+<td>Remove an existing directory.</td>
+</tr>
+<tr>
+<td><a href="./#exists">exists</a></td>
+<td>Return whether the directory is stored in the computer.</td>
+</tr>
+<tr>
+<td><a href="./#list">list</a></td>
+<td>Return a vector of strings with the content of the directory.</td>
+</tr>
+<tr>
+<td><a href="./#name">name</a></td>
+<td>Return the name of a given directory.</td>
+</tr>
+<tr>
+<td><a href="./#path">path</a></td>
+<td>Return the path of a given directory.</td>
+</tr>
+<tr>
+<td><a href="./#relativepath">relativePath</a></td>
+<td>Return a relative path given a small path.</td>
+</tr>
+<tr>
+<td><a href="./#setcurrentdir">setCurrentDir</a></td>
+<td>Set the current working directory with the directory path.</td>
+</tr>
+<tr>
+<td><a href="./#..">..</a></td>
+<td>Concatenate the directory.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="attributes"><strong>attributes</strong></h2>
+<p>Return a table with the file attributes corresponding to filepath (or nil followed by an error message in case of error). If the second optional argument is given, then only the value of the named attribute is returned. The attributes are described as follows; attribute mode is a string, all the others are numbers, and the time related attributes use the same time reference of os.time. This function uses stat internally thus if the given filepath is a symbolic link, it is followed (if it points to another link the chain is followed recursively) and the information is about the file it refers to.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the attribute to be read.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"dev"</td>
+<td>on Unix systems, this represents the device that the inode resides on. On Windows systems, represents the drive number of the disk containing the file</td>
+</tr>
+<tr>
+<td>"ino"</td>
+<td>on Unix systems, this represents the inode number. On Windows systems this has no meaning</td>
+</tr>
+<tr>
+<td>"mode"</td>
+<td>string representing the associated protection mode (the values could be file, directory, link, socket, named pipe, char device, block device or other)</td>
+</tr>
+<tr>
+<td>"nlink"</td>
+<td>number of hard links to the file</td>
+</tr>
+<tr>
+<td>"uid"</td>
+<td>user-id of owner (Unix only, always 0 on Windows)</td>
+</tr>
+<tr>
+<td>"gid"</td>
+<td>group-id of owner (Unix only, always 0 on Windows)</td>
+</tr>
+<tr>
+<td>"rdev"</td>
+<td>on Unix systems, represents the device type, for special file inodes. On Windows systems represents the same as dev</td>
+</tr>
+<tr>
+<td>"access"</td>
+<td>time of last access</td>
+</tr>
+<tr>
+<td>"modification"</td>
+<td>time of last data modification</td>
+</tr>
+<tr>
+<td>"change"</td>
+<td>time of last file status change</td>
+</tr>
+<tr>
+<td>"size"</td>
+<td>file size, in bytes</td>
+</tr>
+<tr>
+<td>"blocks"</td>
+<td>block allocated for file; (Unix only)</td>
+</tr>
+<tr>
+<td>"blksize"</td>
+<td>optimal file system I/O blocksize; (Unix only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>Directory(packageInfo("base").path.."data"):attributes("mode")</code></pre>
+<hr />
+<h2 id="create"><strong>create</strong></h2>
+<p>Create the directory. Returns true if the operation was successful. In case of error, it returns nil plus an error string.  </p>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>dir = Directory("mydirectory")
+dir:create()
+print(dir)
+
+tmpDir = Directory{
+   name = "mytmpdir_XXX",
+   tmp = true
+}
+
+print(tmpDir)
+
+dir:delete()
+tmpDir:delete()</code></pre>
+<hr />
+<h2 id="delete"><strong>delete</strong></h2>
+<p>Remove an existing directory. It removes all internal files and directories recursively. If the directory does not exist or it cannot be removed, this function stops with an error.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>dir = Directory("mydirectory")
+dir:create()
+dir:delete()</code></pre>
+<hr />
+<h2 id="exists"><strong>exists</strong></h2>
+<p>Return whether the directory is stored in the computer.  </p>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>if Directory("C:\\TerraME\\bin"):exists() then
+    print("is dir")
+end</code></pre>
+<hr />
+<h2 id="list"><strong>list</strong></h2>
+<p>Return a vector of strings with the content of the directory.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A boolean value indicating whether hidden files should be returned. The default value is false.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>files = packageInfo("base").data:list()
+
+forEachElement(files, function(_, file)
+    print(file)
+end)</code></pre>
+<hr />
+<h2 id="name"><strong>name</strong></h2>
+<p>Return the name of a given directory. It is the last directory name given a full path.  </p>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>print(Directory("c:\\terrame\\bin\\"):name()) -- "bin"
+
+print(Directory("/usr/local/bin"):name()) -- "bin"</code></pre>
+<hr />
+<h2 id="path"><strong>path</strong></h2>
+<p>Return the path of a given directory. In windows, it converts all backslashes into slashes.  </p>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>print(Directory("c:\\terrame\\bin\\"):path()) -- "c:/terrame"
+
+print(Directory("/usr/local/bin"):path()) -- "/usr/local"</code></pre>
+<hr />
+<h2 id="relativepath"><strong>relativePath</strong></h2>
+<p>Return a relative path given a small path.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Directory or a string with a shorter path.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>d = Directory("/my/full/path")
+print(d:relativePath("/my")) -- "full/path"</code></pre>
+<hr />
+<h2 id="setcurrentdir"><strong>setCurrentDir</strong></h2>
+<p>Set the current working directory with the directory path. Returns true in case of success or nil plus an error string.  </p>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>Directory("c:\\tests"):setCurrentDir()</code></pre>
+<hr />
+<h2 id="_1"><strong>..</strong></h2>
+<p>Concatenate the directory. It adds a path separator whenever needed.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string or an object that can be concatenated.</li>
+</ul>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>path = sessionInfo().path.."data"</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../dataFrame/" class="btn btn-neutral float-left" title="DataFrame"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../environment/" class="btn btn-neutral float-right" title="Environment">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../dataFrame/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../environment/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

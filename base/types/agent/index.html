@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Agent - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Agent";
+        var mkdocs_page_input_path = "base/types/agent.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Agent</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add">add</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addsocialnetwork">addSocialNetwork</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#die">die</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#emptyneighbor">emptyNeighbor</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_1">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#enter">enter</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_2">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#execute">execute</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getcell">getCell</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getcells">getCells</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_7">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getlatency">getLatency</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getsocialnetwork">getSocialNetwork</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_8">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_3">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getstatename">getStateName</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_11">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gettrajectorystatus">getTrajectoryStatus</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_12">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_4">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#init">init</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_13">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_5">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#leave">leave</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_9">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_14">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_6">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#message">message</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_10">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_15">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#move">move</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_11">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_16">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_7">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notify">notify</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_12">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_17">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#on_message">on_message</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_13">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_18">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_8">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reproduce">reproduce</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_14">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_19">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sample">sample</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_15">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_20">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_9">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settrajectorystatus">setTrajectoryStatus</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_16">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_21">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#walk">walk</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_17">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_22">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_10">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#walkifempty">walkIfEmpty</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_18">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_23">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_11">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#walktoempty">walkToEmpty</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_19">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_24">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also_12">See also</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Agent</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="agent">Agent</h1>
+<p>An autonomous entity that is capable of performing actions as well as interacting with other Agents and the spatial representation of the model. The Agent constructor gets a table containing the attributes and functions of the Agent. It can be described as a simple table or as a hybrid <a href="../state/">State</a> machine that has a unique internal state. When the Agent has a set of States, the initial State will be the one declared first. When the agent does not have States, there is a set of user-defined functions that have an associated semantics in TerraME. An Agent can belong to a <a href="../society/">Society</a> and can have <a href="../socialNetwork/">SocialNetworks</a>.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li>execute: An optional function to describe the behavior of the agent each time step it is executed. See <a href="./#execute">execute()</a>.</li>
+<li>id: A string with the unique identifier of the Agent. Agents used as instance for a Society cannot have id as the Society will create the ids for each of its Agents.</li>
+<li>init: An optional function to be executed when the Agent enters in a Society. See <a href="./#init">init()</a>.</li>
+<li>on_message: An optional function describing the behavior of the agent when it receives a message. See <a href="./#on_message">on_message()</a>.</li>
+<li>...: Any other attribute or function for the Agent. It can have, for instance, other "on_x" functions to get messages with subject "x" (see <a href="./#message">message()</a>).</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<p>Some attributes of Agent have internal semantics. They can be used as read-only by the modeler.</p>
+<ul>
+<li>cells: A vector with the <a href="../cell/">Cells</a> representing the default placement of the Agent. It is necessary to use <a href="../../functions/utils/#foreachcell">forEachCell()</a>. This value is the same of "agent.placement.cells".</li>
+<li>cObj_: A pointer to a C++ representation of the Agent. Never use this object.</li>
+<li>id: The unique identifier of the Agent. This attribute only exists when the agent belongs to a Society.</li>
+<li>parent: The Society it belongs (if any).</li>
+<li>placement: A <a href="../trajectory/">Trajectory</a> representing the default placement of the Agent (only when a call to <a href="../environment/#createplacement">Environment:createPlacement()</a> use the Agent).</li>
+<li>socialnetworks: A set of SocialNetworks with the connections of the Agent. This value only exists if the Agent has at least one SocialNetwork.</li>
+<li>state_: An internal state for the Agent. Never use this object.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code class="language-lua">singleFooAgent = Agent{
+    size = 10,
+    name = "foo",
+    execute = function(self)
+        self.size = self.size + 1
+        self:walk()
+    end,
+    on_hello = function(self, m)
+        self:message{
+            receiver = m.sender,
+            content = "hi"
+        }
+    end
+}</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#add">add</a></td>
+<td>Add a <a href="../trajectory/">Trajectory</a> or a <a href="../state/">State</a> to the Agent.</td>
+</tr>
+<tr>
+<td><a href="./#addsocialnetwork">addSocialNetwork</a></td>
+<td>Add a <a href="../socialNetwork/">SocialNetwork</a> to the Agent.</td>
+</tr>
+<tr>
+<td><a href="./#die">die</a></td>
+<td>Kill the agent and remove it from the <a href="../society/">Society</a> it belongs.</td>
+</tr>
+<tr>
+<td><a href="./#emptyneighbor">emptyNeighbor</a></td>
+<td>Return an empty Neighbor <a href="../cell/">Cell</a>.</td>
+</tr>
+<tr>
+<td><a href="./#enter">enter</a></td>
+<td>Put the Agent into a <a href="../cell/">Cell</a>.</td>
+</tr>
+<tr>
+<td><a href="./#execute">execute</a></td>
+<td>The entry point for executing a given Agent.</td>
+</tr>
+<tr>
+<td><a href="./#getcell">getCell</a></td>
+<td>Return the <a href="../cell/">Cell</a> where the Agent is located according to its placement.</td>
+</tr>
+<tr>
+<td><a href="./#getcells">getCells</a></td>
+<td>Return a vector with the <a href="../cell/">Cells</a> pointed by the Agent.</td>
+</tr>
+<tr>
+<td><a href="./#getlatency">getLatency</a></td>
+<td>Return the time when the <a href="../state/">State</a> machine executed the transition to the current state.</td>
+</tr>
+<tr>
+<td><a href="./#getsocialnetwork">getSocialNetwork</a></td>
+<td>Return a <a href="../socialNetwork/">SocialNetwork</a> of the Agent given its name.</td>
+</tr>
+<tr>
+<td><a href="./#getstatename">getStateName</a></td>
+<td>Return a string with the current <a href="../state/">State</a> name.</td>
+</tr>
+<tr>
+<td><a href="./#gettrajectorystatus">getTrajectoryStatus</a></td>
+<td>Return the status of the <a href="../trajectory/">Trajectories</a> of the Agent.</td>
+</tr>
+<tr>
+<td><a href="./#init">init</a></td>
+<td>User-defined function that is used to initialize an Agent when it enters in a given <a href="../society/">Society</a> (e.g.</td>
+</tr>
+<tr>
+<td><a href="./#leave">leave</a></td>
+<td>Remove the Agent from its current <a href="../cell/">Cell</a>.</td>
+</tr>
+<tr>
+<td><a href="./#message">message</a></td>
+<td>Send a message to another Agent.</td>
+</tr>
+<tr>
+<td><a href="./#move">move</a></td>
+<td>Move the Agent to a new <a href="../cell/">Cell</a>.</td>
+</tr>
+<tr>
+<td><a href="./#notify">notify</a></td>
+<td>Notify the Observers of the Agent.</td>
+</tr>
+<tr>
+<td><a href="./#on_message">on_message</a></td>
+<td>User-defined function that can be implemented to allow Agents to exchange messages.</td>
+</tr>
+<tr>
+<td><a href="./#reproduce">reproduce</a></td>
+<td>Create an Agent with the same behavior in the same <a href="../cell/">Cell</a> where the original Agent is (according to its placement).</td>
+</tr>
+<tr>
+<td><a href="./#sample">sample</a></td>
+<td>Return a random Agent from a <a href="../socialNetwork/">SocialNetwork</a> of the Agent.</td>
+</tr>
+<tr>
+<td><a href="./#settrajectorystatus">setTrajectoryStatus</a></td>
+<td>Activate or not the <a href="../trajectory/">Trajectories</a> defined for a given Agent.</td>
+</tr>
+<tr>
+<td><a href="./#walk">walk</a></td>
+<td>Execute a random walk to a neighbor <a href="../cell/">Cell</a>.</td>
+</tr>
+<tr>
+<td><a href="./#walkifempty">walkIfEmpty</a></td>
+<td>Choose a random Neighbor <a href="../cell/">Cell</a> and move if it is empty.</td>
+</tr>
+<tr>
+<td><a href="./#walktoempty">walkToEmpty</a></td>
+<td>Walk to one of the available empty <a href="../cell/">Cells</a> in the <a href="../neighborhood/">Neighborhood</a>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="add">add</h2>
+<p>Add a <a href="../trajectory/">Trajectory</a> or a <a href="../state/">State</a> to the Agent.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A State or a Trajectory.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>ag = Agent{}
+cs = CellularSpace{xdim = 5}
+traj = Trajectory{target = cs}
+
+ag:add(traj)</code></pre>
+<hr />
+<h2 id="addsocialnetwork">addSocialNetwork</h2>
+<p>Add a <a href="../socialNetwork/">SocialNetwork</a> to the Agent. This function replaces previous SocialNetwork with the same id (if it exists) without showing any warning message.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A SocialNetwork.</li>
+<li><strong>#2</strong>: Name of the relation. The default value is "1".</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>agent = Agent{}
+
+soc = Society{
+    instance = agent,
+    quantity = 30
+}
+
+agent = soc:sample()
+friend1 = soc:sample()
+friend2 = soc:sample()
+
+sn = SocialNetwork()
+sn:add(friend1)
+
+if friend2 ~= friend1 then
+    sn:add(friend2)
+end
+
+agent:addSocialNetwork(sn)</code></pre>
+<h3 id="see-also">See also</h3>
+<ul>
+<li><a href="../../functions/utils/#foreachconnection">forEachConnection (Utils)</a></li>
+</ul>
+<hr />
+<h2 id="die">die</h2>
+<p>Kill the agent and remove it from the <a href="../society/">Society</a> it belongs. It also removes any basic placements from the agents (those used by <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, and <a href="./#move">Agent:move()</a>). After executing this function, it will not be possible to call any function from the Agent anymore. Therefore, if there is any complex placement in the model, it should be removed manually before calling this function.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>agent = Agent{
+    execute = function(self)
+        if self.energy &lt;= 0 then
+            agent:die()
+        end
+    end
+}</code></pre>
+<hr />
+<h2 id="emptyneighbor">emptyNeighbor</h2>
+<p>Return an empty Neighbor <a href="../cell/">Cell</a>. If there is no empty neighbor, it returns nil. The Agent needs to have a placement to be able to use this function, and the <a href="../cellularSpace/">CellularSpace</a> must have a <a href="../neighborhood/">Neighborhood</a>. This function is recommended to be used only when it is possible to have only one Agent per Cell.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the placement to be used. The default value is "placement".</li>
+<li><strong>#2</strong>: A string representing the Neighborhood to be used. The default value is "1.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>singleFooAgent = Agent{}
+
+cs = CellularSpace{xdim = 10}
+cs:createNeighborhood()
+
+e = Environment{cs, singleFooAgent}
+e:createPlacement()
+
+singleFooAgent:move(singleFooAgent:emptyNeighbor()) -- same as singleFooAgent:moveToEmpty()</code></pre>
+<h3 id="see-also_1">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+<hr />
+<h2 id="enter">enter</h2>
+<p>Put the Agent into a <a href="../cell/">Cell</a>. This function supposes that each Agent can be in one and only one Cell along the simulation. If the Agent is already inside of a Cell, use <a href="./#move">Agent:move()</a> instead. The agent needs to have a placement to be able to use <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, <a href="./#move">Agent:move()</a>, or <a href="./#walk">Agent:walk()</a>.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Cell.</li>
+<li><strong>#2</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>soc = Society{
+    instance = Agent{},
+    quantity = 30
+}
+
+cs = CellularSpace{
+    xdim = 10
+}
+
+env = Environment{soc, cs}
+env:createPlacement{strategy = "void"}
+
+agent = soc:sample()
+agent:enter(cs:sample())</code></pre>
+<h3 id="see-also_2">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+<hr />
+<h2 id="execute">execute</h2>
+<p>The entry point for executing a given Agent. When the Agent is not defined as a composition of <a href="../state/">States</a>, it is an user-defined function to describe the behavior of an Agent.When the Agent is described as a State machine, execute is automatically defined by TerraME. It activates the <a href="../jump/">Jump</a> of the current State while it jumps from State to State. After that, it executes all the <a href="../flow/">Flows</a> of the current State. Usually, this function is called within an <a href="../event/">Event</a>, thus the time of the Event can be got directly from the <a href="../timer/">Timer</a>.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: An Event.</li>
+</ul>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>agent = Agent{
+    size = 5,
+    execute = function(self)
+        self.size = self.size + 1
+    end
+}
+
+agent:execute()</code></pre>
+<hr />
+<h2 id="getcell">getCell</h2>
+<p>Return the <a href="../cell/">Cell</a> where the Agent is located according to its placement. It assumes that each Agent belongs to at most one Cell.  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
+</ul>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>soc = Society{
+    instance = Agent{},
+    quantity = 30
+}
+
+cs = CellularSpace{
+    xdim = 10
+}
+
+env = Environment{soc, cs}
+env:createPlacement{}
+
+agent = soc:sample()
+cell = agent:getCell()</code></pre>
+<hr />
+<h2 id="getcells">getCells</h2>
+<p>Return a vector with the <a href="../cell/">Cells</a> pointed by the Agent.  </p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>soc = Society{
+    instance = Agent{},
+    quantity = 30
+}
+
+cs = CellularSpace{
+    xdim = 10
+}
+
+env = Environment{soc, cs}
+env:createPlacement{}
+
+agent = soc:sample()
+
+cell = agent:getCells()[1]</code></pre>
+<hr />
+<h2 id="getlatency">getLatency</h2>
+<p>Return the time when the <a href="../state/">State</a> machine executed the transition to the current state. Before executing for the first time, the latency is zero. This function is useful only when the Agent is described as a State machine.  </p>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>-- latency = agent:getLatency()</code></pre>
+<hr />
+<h2 id="getsocialnetwork">getSocialNetwork</h2>
+<p>Return a <a href="../socialNetwork/">SocialNetwork</a> of the Agent given its name.  </p>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Name of the SocialNetwork.</li>
+</ul>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>agent = Agent{}
+
+soc = Society{
+    instance = agent,
+    quantity = 100
+}
+
+soc:createSocialNetwork{probability = 0.5, name = "friends"}
+ag = soc:sample()
+ag:getSocialNetwork("friends")</code></pre>
+<h3 id="see-also_3">See also</h3>
+<ul>
+<li><a href="../society/#createsocialnetwork">createSocialNetwork (Society)</a></li>
+<li><a href="../../functions/utils/#foreachconnection">forEachConnection (Utils)</a></li>
+</ul>
+<hr />
+<h2 id="getstatename">getStateName</h2>
+<p>Return a string with the current <a href="../state/">State</a> name. This function is useful only when the Agent is described as a state machine.  </p>
+<h3 id="usage_11">Usage</h3>
+<pre class="highlight"><code>name = agent:getStateName()</code></pre>
+<hr />
+<h2 id="gettrajectorystatus">getTrajectoryStatus</h2>
+<p>Return the status of the <a href="../trajectory/">Trajectories</a> of the Agent. This function is useful only when the Agent is described as a <a href="../state/">State</a> machine.  </p>
+<h3 id="usage_12">Usage</h3>
+<pre class="highlight"><code>agent:getTrajectoryStatus()</code></pre>
+<h3 id="see-also_4">See also</h3>
+<ul>
+<li><a href="./#settrajectorystatus">setTrajectoryStatus</a></li>
+</ul>
+<hr />
+<h2 id="init">init</h2>
+<p>User-defined function that is used to initialize an Agent when it enters in a given <a href="../society/">Society</a> (e.g. when the Society is created, or when one calls <a href="../society/#add">Society:add()</a>).  </p>
+<h3 id="usage_13">Usage</h3>
+<pre class="highlight"><code>agent = Agent{
+    age = Random{min = 1, max  = 50, step = 1},
+    init = function(self)
+        if self.age &gt; 40 then
+            self.wealth = Random():integer(50, 100)
+        else
+            self.wealth = Random():integer(5, 10)
+        end
+    end
+}
+
+soc = Society{
+    instance = agent,
+    quantity = 10
+}
+
+print(soc:sample().age)</code></pre>
+<h3 id="see-also_5">See also</h3>
+<ul>
+<li><a href="../random/">Random</a></li>
+</ul>
+<hr />
+<h2 id="leave">leave</h2>
+<p>Remove the Agent from its current <a href="../cell/">Cell</a>. If the Agent does not belong to any Cell then it will stop with an error. This function supposes that each Agent can be in one and only one Cell along the simulation. The Agent needs to have a placement to be able to use <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, <a href="./#move">Agent:move()</a>, and <a href="./#walk">Agent:walk()</a>.  </p>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the name of the placement to be used. The default value is "placement".</li>
+</ul>
+<h3 id="usage_14">Usage</h3>
+<pre class="highlight"><code>ag1 = Agent{}
+cs = CellularSpace{xdim = 3}
+myEnv = Environment{cs, ag1}
+myEnv:createPlacement()
+ag1:leave()</code></pre>
+<h3 id="see-also_6">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+<hr />
+<h2 id="message">message</h2>
+<p>Send a message to another Agent. The receiver will get a message as a table through its <a href="./#on_message">Agent:on_message()</a> (as default). Messages can arrive exactly after they are sent (synchronous) or have some delay (asynchronous). In the latter case, it is necessary to call function <a href="../society/#synchronize">Society:synchronize()</a> from the <a href="../society/">Society</a> they belong to deliver the messages.  </p>
+<h3 id="arguments_10">Arguments</h3>
+<ul>
+<li>delay: A number indicating temporal delay before activating this message. The efault value is zero (no delay, no synchronization required). Whenever a delayed message is received, it comes with an attribute delay equals to true.</li>
+<li>receiver: The Agent that will get the message.</li>
+<li>subject: A string describing the function that will be called in the receiver. Given a string x, the receiver will get the message in a function called on_x. The default value is "message". The function to receive the message must be implemented by the modeler. See <a href="./#on_message">Agent:on_message()</a> for more details.</li>
+<li>...: Other arguments are allowed to this function, as the message is a table. The receiver will get all the attributes sent plus an attribute called sender.</li>
+</ul>
+<h3 id="usage_15">Usage</h3>
+<pre class="highlight"><code>agent1 = Agent{
+    on_message = function(self, message)
+        print("Got money:"..message.quantity)
+    end
+}
+
+agent2 = Agent{}
+
+agent2:message{
+    receiver = agent1,
+    content = "money",
+    quantity = 20
+}</code></pre>
+<hr />
+<h2 id="move">move</h2>
+<p>Move the Agent to a new <a href="../cell/">Cell</a>. This function supposes that each Agent can be in one and only one Cell along the simulation. The agent needs to have a placement to be able to use <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, <a href="./#move">Agent:move()</a>, or <a href="./#walk">Agent:walk()</a>.  </p>
+<h3 id="arguments_11">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The new Cell.</li>
+<li><strong>#2</strong>: A string representing the placement to be used. The default value is "placement".</li>
+</ul>
+<h3 id="usage_16">Usage</h3>
+<pre class="highlight"><code>ag1 = Agent{}
+cs = CellularSpace{xdim = 3}
+soc = Society{
+    instance = ag1,
+    quantity = 5
+}
+
+myEnv = Environment{cs, soc}
+myEnv:createPlacement()
+
+ag = soc:sample()
+cell = cs:sample()
+ag:move(cell)</code></pre>
+<h3 id="see-also_7">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+<hr />
+<h2 id="notify">notify</h2>
+<p>Notify the Observers of the Agent.  </p>
+<h3 id="arguments_12">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
+</ul>
+<h3 id="usage_17">Usage</h3>
+<pre class="highlight"><code>agent = Agent{
+    value = 1
+}
+
+Chart{target = agent}
+agent:notify(1)
+agent:notify(2)</code></pre>
+<hr />
+<h2 id="on_message">on_message</h2>
+<p>User-defined function that can be implemented to allow Agents to exchange messages. It is executed every time a receiver gets a message. The received message has the same content of the sent message, plus an attribute called sender with the Agent that sent the message. In the case of non-delayed messages, the returning value of this function (executed by the receiver) is also returned as the result of message (executed by the sender). Note that, although in the description below on_message has only one argument, the signature has two arguments, the first one being the agent itself. This function is usually called internally by TerraME, as result of calls of <a href="./#message">Agent:message()</a> by the modeler. Other functions on_ can be defined by the modeler, and will be called by TerraME according to the subject of the message.  </p>
+<h3 id="arguments_13">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A table with the received message. It has an attribute called sender with the Agent that sent the message.</li>
+</ul>
+<h3 id="usage_18">Usage</h3>
+<pre class="highlight"><code>agent = Agent{
+    money = 0,
+    on_message = function(self, message)
+        self.money = self.money + message.quantity
+        self:message{receiver = message.sender, subject = "thanks"}
+    end,
+    on_thanks = function(self, message)
+        print("thanks")
+        self:message{receiver = message.sender, subject = "yourewelcome"}
+    end,
+    on_yourewelcome = function()
+        print("yourewelcome")
+    end
+}
+
+soc = Society{
+    instance = agent,
+    quantity = 10
+}
+
+soc:sample():message{
+    receiver = soc:sample(),
+    quantity = 20
+}</code></pre>
+<h3 id="see-also_8">See also</h3>
+<ul>
+<li><a href="./#message">message</a></li>
+<li><a href="../society/#synchronize">synchronize (Society)</a></li>
+</ul>
+<hr />
+<h2 id="reproduce">reproduce</h2>
+<p>Create an Agent with the same behavior in the same <a href="../cell/">Cell</a> where the original Agent is (according to its placement). The new Agent is pushed into the same <a href="../society/">Society</a> the original Agent belongs and placements created using the Society are instantiated with size zero if the only argument of reproduce does not contain such placements. This function returns the new Agent.  </p>
+<h3 id="arguments_14">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: An optional table with attributes of the new Agent. If this table do not contay some of the placements registered in its Society, then they are instantiated and the newborn will be placed in the same Cell of its parent. This functionality supposes that an Agent can be in one and only one Cell for each placement along the simulation.</li>
+</ul>
+<h3 id="usage_19">Usage</h3>
+<pre class="highlight"><code>agent = Agent{}
+
+soc = Society{
+    instance = agent,
+    quantity = 100
+}
+
+soc.agents[1]:reproduce()
+print(#soc)</code></pre>
+<hr />
+<h2 id="sample">sample</h2>
+<p>Return a random Agent from a <a href="../socialNetwork/">SocialNetwork</a> of the Agent.  </p>
+<h3 id="arguments_15">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the SocialNetwork. The default value is "1".</li>
+</ul>
+<h3 id="usage_20">Usage</h3>
+<pre class="highlight"><code>ag = Agent{}
+soc = Society{instance = ag, quantity = 5}
+
+sn = SocialNetwork()
+forEachAgent(soc, function(agent)
+    sn:add(agent)
+end)
+
+ag:addSocialNetwork(sn)
+friend = ag:sample()</code></pre>
+<h3 id="see-also_9">See also</h3>
+<ul>
+<li><a href="./#getSocialNetwork">getSocialNetwork</a></li>
+</ul>
+<hr />
+<h2 id="settrajectorystatus">setTrajectoryStatus</h2>
+<p>Activate or not the <a href="../trajectory/">Trajectories</a> defined for a given Agent.  </p>
+<h3 id="arguments_16">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: Use or not the Trajectories. As default, Trajectories are turned off. If status is true, when executed, the Agent that contains <a href="../state/">States</a> will automatically traverse all trajectories defined within it, which means that <a href="./#execute">Agent:execute()</a> will be executed once for each of its <a href="../cell/">Cells</a>. This function is useful only when the Agent is described as a State machine.</li>
+</ul>
+<h3 id="usage_21">Usage</h3>
+<pre class="highlight"><code>-- agent:setTrajectoryStatus(true)</code></pre>
+<hr />
+<h2 id="walk">walk</h2>
+<p>Execute a random walk to a neighbor <a href="../cell/">Cell</a>. This function supposes that each Agent can be in one and only one Cell along the simulation. The Agent needs to have a placement to be able to use <a href="./#enter">Agent:enter()</a>, <a href="./#leave">Agent:leave()</a>, <a href="./#move">Agent:move()</a>, and <a href="./#walk">Agent:walk()</a>.  </p>
+<h3 id="arguments_17">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the placement to be used. The default value is "placement".</li>
+<li><strong>#2</strong>: A string representing the <a href="../neighborhood/">Neighborhood</a> to be used. The default value is "1.</li>
+</ul>
+<h3 id="usage_22">Usage</h3>
+<pre class="highlight"><code>singleFooAgent = Agent{}
+
+cs = CellularSpace{xdim = 10}
+cs:createNeighborhood()
+
+e = Environment{cs, singleFooAgent}
+e:createPlacement()
+
+singleFooAgent:walk()
+singleFooAgent:walk()</code></pre>
+<h3 id="see-also_10">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+<hr />
+<h2 id="walkifempty">walkIfEmpty</h2>
+<p>Choose a random Neighbor <a href="../cell/">Cell</a> and move if it is empty. Note that if it selects a non-empty Cell the Agent will not move, even if there are empty Cells in the <a href="../neighborhood/">Neighborhood</a>. The Agent needs to have a placement to be able to use this function, and the <a href="../cellularSpace/">CellularSpace</a> must have a Neighborhood. This function is recommended to be used only when it is possible to have only one Agent per Cell.  </p>
+<h3 id="arguments_18">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the placement to be used. The default value is "placement".</li>
+<li><strong>#2</strong>: A string representing the Neighborhood to be used. The default value is "1.</li>
+</ul>
+<h3 id="usage_23">Usage</h3>
+<pre class="highlight"><code>singleFooAgent = Agent{}
+
+cs = CellularSpace{xdim = 10}
+cs:createNeighborhood()
+
+e = Environment{cs, singleFooAgent}
+e:createPlacement()
+
+singleFooAgent:walkIfEmpty()</code></pre>
+<h3 id="see-also_11">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+<hr />
+<h2 id="walktoempty">walkToEmpty</h2>
+<p>Walk to one of the available empty <a href="../cell/">Cells</a> in the <a href="../neighborhood/">Neighborhood</a>. If there is no empty neighbor, the Agent will not move. The Agent needs to have a placement to be able to use this function, and the <a href="../cellularSpace/">CellularSpace</a> must have a Neighborhood. This function is recommended to be used only when it is possible to have only one Agent per Cell.  </p>
+<h3 id="arguments_19">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string representing the placement to be used. The default value is "placement".</li>
+<li><strong>#2</strong>: A string representing the Neighborhood to be used. The default value is "1.</li>
+</ul>
+<h3 id="usage_24">Usage</h3>
+<pre class="highlight"><code>singleFooAgent = Agent{}
+
+cs = CellularSpace{xdim = 10}
+cs:createNeighborhood()
+
+e = Environment{cs, singleFooAgent}
+e:createPlacement()
+
+singleFooAgent:walkToEmpty()</code></pre>
+<h3 id="see-also_12">See also</h3>
+<ul>
+<li><a href="../environment/#createplacement">createPlacement (Environment)</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../" class="btn btn-neutral float-left" title="Index"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../automaton/" class="btn btn-neutral float-right" title="Automaton">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../automaton/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

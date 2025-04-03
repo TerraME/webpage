@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Random - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Random";
+        var mkdocs_page_input_path = "base/types/random.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Random</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integer">integer</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#number">number</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#reseed">reSeed</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sample">sample</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Random</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="random">Random</h1>
+<p>Type to generate random numbers. It uses Xorshift generators are among the fastest non-cryptographic random number generators. Xorshift random number generators are a class of pseudorandom number generators that was discovered by George Marsaglia (<a href="http://www.jstatsoft.org/v08/i14/paper">http://www.jstatsoft.org/v08/i14/paper</a>). All the instances of Random along a given simulation have the same seed. The distribution can be inferred according to the selected arguments, as shown below.  </p>
+<table>
+<thead>
+<tr>
+<th>Arguments</th>
+<th>Default distribution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>"bernoulli"</td>
+</tr>
+<tr>
+<td>lambda</td>
+<td>"poisson"</td>
+</tr>
+<tr>
+<td>mean (or) sd</td>
+<td>"normal"</td>
+</tr>
+<tr>
+<td>min, max, step</td>
+<td>"step"</td>
+</tr>
+<tr>
+<td>min, max</td>
+<td>"continuous"</td>
+</tr>
+<tr>
+<td>(set of values)</td>
+<td>"discrete"</td>
+</tr>
+<tr>
+<td>(set of named values)</td>
+<td>"categorical"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>alpha</strong>: Argument of beta distribution. The default value is 1.</li>
+<li><strong>beta</strong>: Argument of beta distribution. The default value is 1.</li>
+<li><strong>distrib</strong>: A string representing the statistical distribution to be used. See the table below.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Distrib</th>
+<th>Description</th>
+<th>Compulsory Arguments</th>
+<th>Optional Arguments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"bernoulli"</td>
+<td>A boolean distribution that returns true with probability p.</td>
+<td>p</td>
+<td>seed</td>
+</tr>
+<tr>
+<td>"beta"</td>
+<td>A family of continuous probability distributions defined on the interval [0, 1] parametrized by two positive shape parameters, denoted by alpha and beta, that appear as exponents of the random variable and control the shape of the distribution.</td>
+<td></td>
+<td>alpha, beta, seed</td>
+</tr>
+<tr>
+<td>"categorical"</td>
+<td>A distribution that has names associated to probabilities. Each name is an argument and has a value between zero and one, indicating the probability to be selected. The sum of all probabilities must be one.</td>
+<td>...</td>
+<td>seed</td>
+</tr>
+<tr>
+<td>"continuous"</td>
+<td>A continuous uniform distribition. It selects real numbers in a given interval.</td>
+<td>max, min</td>
+<td>seed</td>
+</tr>
+<tr>
+<td>"discrete"</td>
+<td>A discrete uniform distribition. Elements are described as a vector.</td>
+<td>...</td>
+<td>seed</td>
+</tr>
+<tr>
+<td>"exponential"</td>
+<td>Generate exponentialy distributed pseudo random numbers from a uniformly distributed number in the range [0,1]. For this purpose, it uses the Inverse Transform Samplig method</td>
+<td></td>
+<td>lambda, seed</td>
+</tr>
+<tr>
+<td>"lognormal"</td>
+<td>Generate log-normally distributed pseudo random numbers from a normaly distributed number in the range [0,1] using the Box-Muller (1978) method.</td>
+<td></td>
+<td>mean, sd, seed</td>
+</tr>
+<tr>
+<td>"none"</td>
+<td>No distribution. This is useful only when the modeler wants only to set seed.</td>
+<td></td>
+<td>seed</td>
+</tr>
+<tr>
+<td>"normal"</td>
+<td>Generate Normally (Gaussian) distributed pseudo random numbers from a uniformly distributed number in the range [0,1] using the Box-Muller (1978) method .</td>
+<td></td>
+<td>mean, sd, seed</td>
+</tr>
+<tr>
+<td>"poisson"</td>
+<td>Generate Poisson distributed pseudo random numbers from a uniformly distributed number in the range [0,1]. For this purpose, it uses the Inverse Transform Samplig method.</td>
+<td></td>
+<td>lambda, seed</td>
+</tr>
+<tr>
+<td>"step"</td>
+<td>A discrete uniform distribution whose values belong to a given [min, max] interval using step values.</td>
+<td>max, min, step</td>
+<td>seed</td>
+</tr>
+<tr>
+<td>"weibull"</td>
+<td>The Weibull distribution is a real valued distribution with two parameters a and b, producing values greater than or equals to zero.</td>
+<td></td>
+<td>k</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>k</strong>: The shape parameter for Weibull distribution. The default value is 1.</li>
+<li><strong>lambda</strong>: An argument of some distributions. It might be interpreted as mean or as scale, according to the given distribution. The default value is 1.</li>
+<li><strong>max</strong>: A number indicating the maximum value to be randomly selected.</li>
+<li><strong>mean</strong>: A number indicating the mean value. The default value is 1.</li>
+<li><strong>min</strong>: A number indicating the minimum value to be randomly selected.</li>
+<li><strong>p</strong>: A number between 0 and 1 representing a probability.</li>
+<li><strong>sd</strong>: A number indicating the standard deviation. The default value is 1.</li>
+<li><strong>seed</strong>: A number to generate the pseudo-random numbers. The default value is the current time of the system, which means that every simulation will use different random numbers. Choosing a seed in interesting when the modeler wants to have the same simulation outcomes despite using random numbers. It is a good programming practice to set the seed in the beginning of the simulation and only once.</li>
+<li><strong>step</strong>: The step where possible values are computed from minimum to maximum. When using this argument, min and max become mandatory.</li>
+<li><strong>...</strong>: Other values to build a categorical or discrete uniform distribution.</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<p>Some attributes of Random have internal semantics. They can be used as <strong>read-only</strong> by the modeler.</p>
+<ul>
+<li><strong>distrib</strong>: The distribution of the Random object. All the other parameters of the distribution are also attributes.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>random = Random()
+
+bernoulli = Random{p = 0.4}
+print(bernoulli:sample())
+
+range = Random{min = 3, max = 7}
+print(range:sample())
+
+step = Random{min = 1, max = 9, step = 2}
+print(step:sample())
+
+gender = Random{male = 0.49, female = 0.51}
+print(gender:sample())
+
+age = Random{1, 2, 4, 8, 16, 32}
+print(age:sample())
+
+cover = Random{"pasture", "forest", "clearcut"}
+print(cover:sample())
+
+person = Agent{
+    gender = Random{male = 0.49, female = 0.51},
+    age = Random{mean = 20, sd = 2},
+    contacts = Random{lambda = 5}
+}
+
+soc = Society{
+    instance = person,
+    quantity = 10
+}
+
+print(soc:gender().male)</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#integer">integer</a></td>
+<td>Return an integer random number.</td>
+</tr>
+<tr>
+<td><a href="./#number">number</a></td>
+<td>Return a random real number.</td>
+</tr>
+<tr>
+<td><a href="./#reseed">reSeed</a></td>
+<td>Set the seed to generate random numbers.</td>
+</tr>
+<tr>
+<td><a href="./#sample">sample</a></td>
+<td>Return a random element from the chosen distribution.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="integer"><strong>integer</strong></h2>
+<p>Return an integer random number. It uses a discrete uniform distribution.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: An integer number. If abscent, integer() will return zero or one. If it is the only argument, it will return a number between zero and this value.</li>
+<li><strong>#2</strong>: An integer number. When used, integer() will return a number between the first argument and the second, inclusive.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>random = Random()
+
+value = random:integer() -- 0 or 1
+value = random:integer(10) -- from 0 to 10
+value = random:integer(5, 10) -- from 5 to 10</code></pre>
+<hr />
+<h2 id="number"><strong>number</strong></h2>
+<p>Return a random real number. By default number() will return a value between zero and one.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number. If it is the only argument used, it will return a number from zero to this value.</li>
+<li><strong>#2</strong>: A number. When used, number() will return a number between the first argument and the second.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>random = Random()
+
+value = random:number() -- between 0 and 1
+value = random:number(10) -- between 0 and 10
+value = random:number(5, 10) -- between 5 and 10</code></pre>
+<hr />
+<h2 id="reseed"><strong>reSeed</strong></h2>
+<p>Set the seed to generate random numbers. This seed will be used in new instances of Random. All Random objecs previously created will still use the previous seed.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: An integer number with the new seed.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>random = Random()
+
+random:reSeed(12345)</code></pre>
+<hr />
+<h2 id="sample"><strong>sample</strong></h2>
+<p>Return a random element from the chosen distribution.  </p>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>random = Random{2, 3, 4, 6}
+
+random:sample()</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../profiler/" class="btn btn-neutral float-left" title="Profiler"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../socialNetwork/" class="btn btn-neutral float-right" title="SocialNetwork">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../profiler/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../socialNetwork/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

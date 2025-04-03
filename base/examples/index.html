@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Examples - TerraME</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Examples";
+        var mkdocs_page_input_path = "base/examples.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Examples</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#barros">barros</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#beer">beer</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_1">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#continuous-rain">continuous-rain</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_2">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deforestation">deforestation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#discrete-rain">discrete-rain</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_3">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#drainage">drainage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#el-farol">el-farol</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_4">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fire-spread">fire-spread</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_5">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#game-of-life">game-of-life</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_6">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#growing-moving-society">growing-moving-society</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_7">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#growing-society">growing-society</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_8">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ipd">ipd</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_9">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#leontief">leontief</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_10">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#predator-prey">predator-prey</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#runoff">runoff</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#schelling">schelling</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_11">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#single-agent">single-agent</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#single-agents-society">single-agents-society</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sir-abm">sir-abm</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sir-basic">sir-basic</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sir-campaign">sir-campaign</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sir-improved">sir-improved</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#spatial-game">spatial-game</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#arguments-global-variables_12">Arguments (global variables)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tube-discrete">tube-discrete</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tube-inflow-outflow">tube-inflow-outflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tube">tube</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+      <li class="breadcrumb-item active">Examples</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="examples">Examples</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#barros">barros</a></td>
+<td>Implementation of Barros urban dynamics model.</td>
+</tr>
+<tr>
+<td><a href="./#beer">beer</a></td>
+<td>Implementation of beer economic chain model.</td>
+</tr>
+<tr>
+<td><a href="./#continuous-rain">continuous-rain</a></td>
+<td>A simple continuous rain model.</td>
+</tr>
+<tr>
+<td><a href="./#deforestation">deforestation</a></td>
+<td>Amazonia deforestation models.</td>
+</tr>
+<tr>
+<td><a href="./#discrete-rain">discrete-rain</a></td>
+<td>A simple discrete rain model.</td>
+</tr>
+<tr>
+<td><a href="./#drainage">drainage</a></td>
+<td>A simple drainage model.</td>
+</tr>
+<tr>
+<td><a href="./#el-farol">el-farol</a></td>
+<td>Implementation of El Farol model.</td>
+</tr>
+<tr>
+<td><a href="./#fire-spread">fire-spread</a></td>
+<td>A simple spread model that uses geospatial data.</td>
+</tr>
+<tr>
+<td><a href="./#game-of-life">game-of-life</a></td>
+<td>Implementation of Conway's Game of Life.</td>
+</tr>
+<tr>
+<td><a href="./#growing-moving-society">growing-moving-society</a></td>
+<td>A model with 100 moving and growing Agents.</td>
+</tr>
+<tr>
+<td><a href="./#growing-society">growing-society</a></td>
+<td>A model with static Agents that can reproduce to neighbor Cells.</td>
+</tr>
+<tr>
+<td><a href="./#ipd">ipd</a></td>
+<td>Iterated Prisoner's dilemma model.</td>
+</tr>
+<tr>
+<td><a href="./#leontief">leontief</a></td>
+<td>Implementation of a model to study scenarios for the economy of Southeast Para state.</td>
+</tr>
+<tr>
+<td><a href="./#predator-prey">predator-prey</a></td>
+<td>Implementation of a spatial predator-prey model.</td>
+</tr>
+<tr>
+<td><a href="./#runoff">runoff</a></td>
+<td>Implementation of a simple runoff model using geospatial data.</td>
+</tr>
+<tr>
+<td><a href="./#schelling">schelling</a></td>
+<td>Implementation of Schelling's segregation model.</td>
+</tr>
+<tr>
+<td><a href="./#single-agent">single-agent</a></td>
+<td>A simple example with one Agent that moves randomly in space.</td>
+</tr>
+<tr>
+<td><a href="./#single-agents-society">single-agents-society</a></td>
+<td>Simulation of a Society with 30 moving Agents.</td>
+</tr>
+<tr>
+<td><a href="./#sir-abm">sir-abm</a></td>
+<td>SIR model implemented with agents.</td>
+</tr>
+<tr>
+<td><a href="./#sir-basic">sir-basic</a></td>
+<td>A simple Susceptible-Infected-Recovered (SIR) model.</td>
+</tr>
+<tr>
+<td><a href="./#sir-campaign">sir-campaign</a></td>
+<td>A Susceptible-Infected-Recovered (SIR) model with a public campaign.</td>
+</tr>
+<tr>
+<td><a href="./#sir-improved">sir-improved</a></td>
+<td>A Susceptible-Infected-Recovered (SIR) model.</td>
+</tr>
+<tr>
+<td><a href="./#spatial-game">spatial-game</a></td>
+<td>Implementation of the model proposed by Nowak and Sigmund.</td>
+</tr>
+<tr>
+<td><a href="./#tube-discrete">tube-discrete</a></td>
+<td>A model that describes water flowing out of a tube.</td>
+</tr>
+<tr>
+<td><a href="./#tube-inflow-outflow">tube-inflow-outflow</a></td>
+<td>A model that describes water flowing in and out of a tube.</td>
+</tr>
+<tr>
+<td><a href="./#tube">tube</a></td>
+<td>A simple model that describes water flowing out of a tube.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="barros"><a href="http://localhost:5500/examples/barros.lua">barros</a></h2>
+<p><img alt="" src="http://localhost:5500/images/barros.png" /></p>
+<p>Implementation of Barros urban dynamics model. It simulates a virtual city composed by poor, middle class, and rich people. The simulation starts with the city having only one inhabitant in the center of space. At each time step, a new inhabitant arrives in the center. As it is not possible to have more than one inhabitant in the same cell, the arriving inhabitants with higher income can replace those with lower income, which in turn need to search for a new cell to leave, moving randomly. Empty cells can be occupied by any kind of agent.  </p>
+<p>Reference: Barros, J. "Simulating urban dynamics in Latin American cities." GeoDynamics (2005): 313-328.  </p>
+<h3 id="arguments-global-variables">Arguments (global variables)</h3>
+<ul>
+<li><strong>P_POOR</strong>: Percentage of poor agents.</li>
+<li><strong>P_MIDDLE</strong>: Percentage of middle class agents.</li>
+<li><strong>P_RICH</strong>: Percentage of rich agents. Note that the sum of the three percentages must be one.</li>
+<li><strong>DIM</strong>: The x and y dimensions of space.</li>
+<li><strong>AGENTS</strong>: The number of agents in the simulation.</li>
+</ul>
+<hr />
+<h2 id="beer"><a href="http://localhost:5500/examples/beer.lua">beer</a></h2>
+<p><img alt="" src="http://localhost:5500/images/beer.png" /></p>
+<p>Implementation of beer economic chain model. This model represents an economic chain with a manufacturer, some intermediate nodes (such as a distributor and a supplier), and a retailer. The agents in the economic chain need to fill their demand by requesting beer to the previous agent of the chain. The retailer has a random demand, while the others have a demand requested by the next agent of the chain. Each requested beer takes three time steps to be delivered from one agent to the next one (as long as there is some stock to fulfil the demand). The objective of the game is to minimize expenditure from back orders and inventory.  </p>
+<p>For more information, see <a href="https://en.wikipedia.org/wiki/Beer_distribution_game.">https://en.wikipedia.org/wiki/Beer_distribution_game.</a>  </p>
+<h3 id="arguments-global-variables_1">Arguments (global variables)</h3>
+<ul>
+<li><strong>NUMBER_OF_AGENTS</strong>: Number of agents in the chain, excluding the manufacturer and the retailer. The default value is three.</li>
+</ul>
+<hr />
+<h2 id="continuous-rain"><a href="http://localhost:5500/examples/continuous-rain.lua">continuous-rain</a></h2>
+<p>A simple continuous rain model. It uses three differential equations to simulate rain, soil water, and drainage dynamics.  </p>
+<h3 id="arguments-global-variables_2">Arguments (global variables)</h3>
+<ul>
+<li><strong>C</strong>: The amount of rain per unit of time. The default value is 2.</li>
+<li><strong>K</strong>: The flow coefficient. The default value is 0.4.</li>
+<li><strong>dt</strong>: The step used in the numerical integration. The default value is 0.01.</li>
+</ul>
+<hr />
+<h2 id="deforestation"><a href="http://localhost:5500/examples/deforestation.lua">deforestation</a></h2>
+<p><img alt="" src="http://localhost:5500/images/deforestation.png" /></p>
+<p>Amazonia deforestation models. It uses a top-down approach with three strategies to compute deforestation potential. The first strategy compute the deforestation potential based on the deforestation of neighbor cells. The second one uses the result of a statistical regression using distance to urban areas, connection to markets, and coverage of protected areas as parameters. The last strategies mixes the other two. It adds the average deforestation of the neighborhood to the statistical regression.  </p>
+<hr />
+<h2 id="discrete-rain"><a href="http://localhost:5500/examples/discrete-rain.lua">discrete-rain</a></h2>
+<p>A simple discrete rain model. It simply computes the amount of water according to the rain and a flow coefficient.  </p>
+<h3 id="arguments-global-variables_3">Arguments (global variables)</h3>
+<ul>
+<li><strong>C</strong>: The amount of rain per unit of time. The default value is 2.</li>
+<li><strong>K</strong>: The flow coefficient. The default value is 0.4.</li>
+</ul>
+<hr />
+<h2 id="drainage"><a href="http://localhost:5500/examples/drainage.lua">drainage</a></h2>
+<p><img alt="" src="http://localhost:5500/images/drainage.png" /></p>
+<p>A simple drainage model. It uses a Chart to show the output of the simulation.  </p>
+<hr />
+<h2 id="el-farol"><a href="http://localhost:5500/examples/el-farol.lua">el-farol</a></h2>
+<p><img alt="" src="http://localhost:5500/images/el-farol.png" /></p>
+<p>Implementation of El Farol model. It is based on Brian Arthur's paper available at <a href="http://www.santafe.edu/~wbarthur/Papers/El_Farol.">http://www.santafe.edu/~wbarthur/Papers/El_Farol.</a> In this model, there is a city with a given population. Everybody wants to go to an entertainment offered once a week by a bar called El Farol. However, if the bar is too crowded, it is not enjoyable. Each agent decides on whether to go to the bar based on its expectations on how much people the bar will have. Decisions are taken independently from each other. Agents can have different ways of thinking, based on the amount of people that went to the bar in the last weeks.  </p>
+<h3 id="arguments-global-variables_4">Arguments (global variables)</h3>
+<ul>
+<li><strong>N</strong>: Number of people in the city. The default value is 100.</li>
+<li><strong>K</strong>: number of strategies each individual has (if only one then the agent will never change its strategy). The default value is 3.</li>
+<li><strong>MAX</strong>: Maximum number of people in the bar. The default value is 60.</li>
+</ul>
+<hr />
+<h2 id="fire-spread"><a href="http://localhost:5500/examples/fire-spread.lua">fire-spread</a></h2>
+<p><img alt="" src="http://localhost:5500/images/fire-spread.png" /></p>
+<p>A simple spread model that uses geospatial data. It simulates a fire in Parque Nacional das Emas, in Goias state, Brazil. It has probabilities for fire spread according to the biomass stored in each cell.  </p>
+<p>This model was proposed by Almeida, Rodolfo M., et al. (in portuguese) 'Simulando padroes de incendios no Parque Nacional das Emas, Estado de Goias, Brasil.' X Simposio Brasileiro de Geoinfoamatica (2008).  </p>
+<h3 id="arguments-global-variables_5">Arguments (global variables)</h3>
+<ul>
+<li><strong>STEPS</strong>: The final simulation time. The default value is 35.</li>
+</ul>
+<hr />
+<h2 id="game-of-life"><a href="http://localhost:5500/examples/game-of-life.lua">game-of-life</a></h2>
+<p><img alt="" src="http://localhost:5500/images/game-of-life.png" /></p>
+<p>Implementation of Conway's Game of Life. It is a classical Cellular Automata model that simulates changes in a society using very simple rules. Each cell represents an individual that can have two states: alive or dead. Using its own state and the state of its neighbors, each individual decides its next state. The model has four rules. First, an alive cell with fewer than two alive neighbors dies by loneliness. Second, an alive cell with two or three alive neighbors stays alive. Third, an alive cell with more than three alive neighbors dies by over-population. Fourth, a dead cell with three alive neighbors becomes alive by reproduction.  </p>
+<p>This implementation creates the initial distribution of alive cells randomly.  </p>
+<p>For more information, see <a href="https://en.wikipedia.org/wiki/Conway">https://en.wikipedia.org/wiki/Conway</a>'s_Game_of_Life.  </p>
+<h3 id="arguments-global-variables_6">Arguments (global variables)</h3>
+<ul>
+<li><strong>PROBABILITY</strong>: The probability of a Cell to be alive in the beginning of the simulation. The default value is 0.15.</li>
+<li><strong>TURNS</strong>: The number of simulation steps. The default value is 20.</li>
+</ul>
+<hr />
+<h2 id="growing-moving-society"><a href="http://localhost:5500/examples/growing-moving-society.lua">growing-moving-society</a></h2>
+<p><img alt="" src="http://localhost:5500/images/growing-moving-society.png" /></p>
+<p>A model with 100 moving and growing Agents. An Agent moves to an empty random cell in each time step and reproduces if it finds another empty random cell, given a probability.  </p>
+<h3 id="arguments-global-variables_7">Arguments (global variables)</h3>
+<ul>
+<li><strong>GROWTH_PROB</strong>: The probability of an agent to reproduce in an empty neighbor cell. The default value is 0.3.</li>
+</ul>
+<hr />
+<h2 id="growing-society"><a href="http://localhost:5500/examples/growing-society.lua">growing-society</a></h2>
+<p><img alt="" src="http://localhost:5500/images/growing-society.png" /></p>
+<p>A model with static Agents that can reproduce to neighbor Cells. An Agent reproduces if it finds another empty random cell, given a probability.  </p>
+<h3 id="arguments-global-variables_8">Arguments (global variables)</h3>
+<ul>
+<li><strong>GROWTH_PROB</strong>: The probability of an agent to reproduce in an empty neighbor cell. The default value is 0.3.</li>
+</ul>
+<hr />
+<h2 id="ipd"><a href="http://localhost:5500/examples/ipd.lua">ipd</a></h2>
+<p>Iterated Prisoner's dilemma model. It implements a championship with a set of Agents where they play with each other a non-cooperative game repeatedly. Some of the available strategies are Pavlov and Tit-for-tat. In the end, the model shows the results for each strategy.  </p>
+<p>For more information, see Axelrod, R. (1984) The Evolution of Cooperation. Basic Books. See also Nowak, M., and Sigmund, K. (1993) A strategy of win-stay, lose-shift that outperforms tit-for-tat in the Prisoner's Dilemma game. Nature 364.6432: 56-58.  </p>
+<h3 id="arguments-global-variables_9">Arguments (global variables)</h3>
+<ul>
+<li><strong>TURNS</strong>: The number of times an Agent plays with each opponent.</li>
+<li><strong>CHAMPIONSHIP</strong>: A vector with the strategies used in the championship.</li>
+</ul>
+<hr />
+<h2 id="leontief"><a href="http://localhost:5500/examples/leontief.lua">leontief</a></h2>
+<p>Implementation of a model to study scenarios for the economy of Southeast Para state. This model solves the inversion of an input-output matrix using an agent-based model. It implements a set of investment scenarios for the region and simulates the impacts over salaries, employment, and carbon emissions.  </p>
+<p>For more information, see Andrade et al. (2010) From input-output matrixes to agent-based models: A case study on carbon credits in a local economy. BWSS 2010.  </p>
+<h3 id="arguments-global-variables_10">Arguments (global variables)</h3>
+<ul>
+<li><strong>scenario</strong>: Number of the scenario. It can be an integer value between 1 and 5. The default value is 1.</li>
+</ul>
+<hr />
+<h2 id="predator-prey"><a href="http://localhost:5500/examples/predator-prey.lua">predator-prey</a></h2>
+<p><img alt="" src="http://localhost:5500/images/predator-prey.png" /></p>
+<p>Implementation of a spatial predator-prey model. This model has two Societies. One composed by preys that feed grass and the other composed by predators that feed preys. Agents move randomly in space and can reproduce. The output is similar to Lotka-Volterra equations.  </p>
+<hr />
+<h2 id="runoff"><a href="http://localhost:5500/examples/runoff.lua">runoff</a></h2>
+<p><img alt="" src="http://localhost:5500/images/runoff.png" /></p>
+<p>Implementation of a simple runoff model using geospatial data. There is an initial rain in the highest cells. The Neighborhood of a Cell is composed by its Moore neighbors that have lower height. Each cell then sends its water equally to all neighbors.  </p>
+<hr />
+<h2 id="schelling"><a href="http://localhost:5500/examples/schelling.lua">schelling</a></h2>
+<p><img alt="" src="http://localhost:5500/images/schelling.png" /></p>
+<p>Implementation of Schelling's segregation model. In this model, a Society is composed by two types of Agents, reds and blacks, which live in Cells. Each Agent is happy if its neighborhood has at least a given number of Agents sharing its type. Otherwise, it will try to move to another place where it is satisfied. Using this model, Thomas Schelling showed that a small preference for one's neighbors to be of the same color could lead to total segregation.  </p>
+<p>For more information, see Schelling, T. (1971) Dynamic models of seggregation, Journal of Mathematical Sociology 1:143-186.  </p>
+<h3 id="arguments-global-variables_11">Arguments (global variables)</h3>
+<ul>
+<li><strong>NDIM</strong>: Space dimensions in x and y axis.</li>
+<li><strong>PREFERENCE</strong>: Agent contentedness, indicating the minimum number of neighbors of the same color to make the agent satisfied. It should be an integer number between 3 and 5.</li>
+<li><strong>NAGTS</strong>: The proportion of agents in space.</li>
+<li><strong>MAX_TURNS</strong>: Maximum number of simulation steps.</li>
+</ul>
+<hr />
+<h2 id="single-agent"><a href="http://localhost:5500/examples/single-agent.lua">single-agent</a></h2>
+<p><img alt="" src="http://localhost:5500/images/single-agent.png" /></p>
+<p>A simple example with one Agent that moves randomly in space.  </p>
+<hr />
+<h2 id="single-agents-society"><a href="http://localhost:5500/examples/single-agents-society.lua">single-agents-society</a></h2>
+<p><img alt="" src="http://localhost:5500/images/single-agents-society.png" /></p>
+<p>Simulation of a Society with 30 moving Agents.  </p>
+<hr />
+<h2 id="sir-abm"><a href="http://localhost:5500/examples/sir-abm.lua">sir-abm</a></h2>
+<p><img alt="" src="http://localhost:5500/images/sir-abm.png" /></p>
+<p>SIR model implemented with agents. This model needs to have more implementation decisions if compared to one implemented using system dynamics. The social network of an agent is fixed? In a system dynamics model it supposes that the network is not fixed as disease is propagated to the whole population using probabilities. Another question: an agent that has got sick in a given time step can infect other agents? This implementation supposes it can only infect in the next time step.  </p>
+<hr />
+<h2 id="sir-basic"><a href="http://localhost:5500/examples/sir-basic.lua">sir-basic</a></h2>
+<p><img alt="" src="http://localhost:5500/images/sir-basic.png" /></p>
+<p>A simple Susceptible-Infected-Recovered (SIR) model. This model represents a given disease that propagates over a population. It starts with a small number of infected that passes the disease to the susceptible ones. After some time, infected become recovered, which cannot be infected again.  </p>
+<p>For mode details visit <a href="http://en.wikipedia.org/wiki/Epidemic_model.">http://en.wikipedia.org/wiki/Epidemic_model.</a>  </p>
+<hr />
+<h2 id="sir-campaign"><a href="http://localhost:5500/examples/sir-campaign.lua">sir-campaign</a></h2>
+<p><img alt="" src="http://localhost:5500/images/sir-campaign.png" /></p>
+<p>A Susceptible-Infected-Recovered (SIR) model with a public campaign. The campaign asks the population to stop leaving home, which reduces the number of contacts by half. It is activated whenever there are more than 1000 infected individuous in the population.  </p>
+<hr />
+<h2 id="sir-improved"><a href="http://localhost:5500/examples/sir-improved.lua">sir-improved</a></h2>
+<p><img alt="" src="http://localhost:5500/images/sir-improved.png" /></p>
+<p>A Susceptible-Infected-Recovered (SIR) model. In this model the disease has a duration of 8 weeks. We can see that the maximum number of infected is proportional to the duration of the disease.  </p>
+<hr />
+<h2 id="spatial-game"><a href="http://localhost:5500/examples/spatial-game.lua">spatial-game</a></h2>
+<p><img alt="" src="http://localhost:5500/images/spatial-game.png" /></p>
+<p>Implementation of the model proposed by Nowak and Sigmund. In this model, each Cell has a strategy and plays a non-cooperative game with its neighbors. Then it updates its strategy with the most successful one among its neighbors. This simple spatial game produces a very complex spatial dynamics such as kaleidoscopes and dynamic fractals.  </p>
+<p>Reference: Nowak and Sigmund (2004) Evolutionary Dynamics of Biological Games, Science 303(5659):793-799.  </p>
+<h3 id="arguments-global-variables_12">Arguments (global variables)</h3>
+<ul>
+<li><strong>N</strong>: Space dimensions in x and y axis.</li>
+<li><strong>TURNS</strong>: Number of simulation steps.</li>
+</ul>
+<hr />
+<h2 id="tube-discrete"><a href="http://localhost:5500/examples/tube-discrete.lua">tube-discrete</a></h2>
+<p><img alt="" src="http://localhost:5500/images/tube-discrete.png" /></p>
+<p>A model that describes water flowing out of a tube. It uses an observation step more frequent than the execution. Because of that, we can see that the water flows out of the tube in discrete steps.  </p>
+<hr />
+<h2 id="tube-inflow-outflow"><a href="http://localhost:5500/examples/tube-inflow-outflow.lua">tube-inflow-outflow</a></h2>
+<p><img alt="" src="http://localhost:5500/images/tube-inflow-outflow.png" /></p>
+<p>A model that describes water flowing in and out of a tube. This implementation also verifies does not allow to have negative amounts of water in the tube.  </p>
+<hr />
+<h2 id="tube"><a href="http://localhost:5500/examples/tube.lua">tube</a></h2>
+<p><img alt="" src="http://localhost:5500/images/tube.png" /></p>
+<p>A simple model that describes water flowing out of a tube.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../functions/utils/" class="btn btn-neutral float-left" title="Utils"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../data/" class="btn btn-neutral float-right" title="Data">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../functions/utils/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../data/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

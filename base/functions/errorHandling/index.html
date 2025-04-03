@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>ErrorHandling - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ErrorHandling";
+        var mkdocs_page_input_path = "base/functions/errorHandling.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Functions</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">ErrorHandling</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#customerror">customError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#customwarning">customWarning</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#defaulttablevalue">defaultTableValue</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#defaultvaluemsg">defaultValueMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#defaultvaluewarning">defaultValueWarning</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deprecatedfunction">deprecatedFunction</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deprecatedfunctionmsg">deprecatedFunctionMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#incompatibletypeerror">incompatibleTypeError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_7">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#incompatibletypemsg">incompatibleTypeMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_8">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#incompatiblevalueerror">incompatibleValueError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_9">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#incompatiblevaluemsg">incompatibleValueMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_10">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integerargument">integerArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_11">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_11">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integerargumentmsg">integerArgumentMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_12">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_12">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#integertableargument">integerTableArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_13">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_13">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#invalidfileextensionerror">invalidFileExtensionError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_14">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_14">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#invalidfileextensionmsg">invalidFileExtensionMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_15">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_15">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mandatoryargument">mandatoryArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_16">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_16">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mandatoryargumenterror">mandatoryArgumentError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_17">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_17">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mandatoryargumentmsg">mandatoryArgumentMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_18">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_18">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mandatorytableargument">mandatoryTableArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_19">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_19">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#namedargumentsmsg">namedArgumentsMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_20">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optionalargument">optionalArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_20">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_21">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#optionaltableargument">optionalTableArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_21">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_22">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#positiveargument">positiveArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_22">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_23">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#positiveargumentmsg">positiveArgumentMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_23">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_24">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#positivetableargument">positiveTableArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_24">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_25">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resourcenotfounderror">resourceNotFoundError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_25">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_26">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#resourcenotfoundmsg">resourceNotFoundMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_26">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_27">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#strictwarning">strictWarning</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_27">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_28">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#suggestion">suggestion</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_28">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_29">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#suggestionmsg">suggestionMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_29">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_30">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#switchinvalidargument">switchInvalidArgument</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_30">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_31">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#switchinvalidargumentmsg">switchInvalidArgumentMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_31">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_32">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#switchinvalidargumentsuggestionmsg">switchInvalidArgumentSuggestionMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_32">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_33">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#tableargumentmsg">tableArgumentMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_34">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unnecessaryargumentmsg">unnecessaryArgumentMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_33">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_35">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#valuenotfounderror">valueNotFoundError</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_34">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_36">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#valuenotfoundmsg">valueNotFoundMsg</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_35">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_37">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#verify">verify</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_36">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_38">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#verifynamedtable">verifyNamedTable</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_37">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_39">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#verifyunnecessaryarguments">verifyUnnecessaryArguments</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_38">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_40">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Functions</li>
+      <li class="breadcrumb-item active">ErrorHandling</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="errorhandling">ErrorHandling</h1>
+<p>Some basic and useful functions to handle errors and error messages.</p>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#customerror">customError</a></td>
+<td>Stop the simulation with an error.</td>
+</tr>
+<tr>
+<td><a href="./#customwarning">customWarning</a></td>
+<td>Print a warning.</td>
+</tr>
+<tr>
+<td><a href="./#defaulttablevalue">defaultTableValue</a></td>
+<td>Verify the default value of a given attribute of a named table.</td>
+</tr>
+<tr>
+<td><a href="./#defaultvaluemsg">defaultValueMsg</a></td>
+<td>Return a message indicating that the modeler is using the default value for a given argument and therefore it could be removed.</td>
+</tr>
+<tr>
+<td><a href="./#defaultvaluewarning">defaultValueWarning</a></td>
+<td>Show a strict warning if the attribute of a table has the default value.</td>
+</tr>
+<tr>
+<td><a href="./#deprecatedfunction">deprecatedFunction</a></td>
+<td>Show an error indicating a deprecated function.</td>
+</tr>
+<tr>
+<td><a href="./#deprecatedfunctionmsg">deprecatedFunctionMsg</a></td>
+<td>Return a message indicating that a function is deprecated and must be replaced.</td>
+</tr>
+<tr>
+<td><a href="./#incompatibletypeerror">incompatibleTypeError</a></td>
+<td>Stop the simulation with an error of a wrong type for an argument of a function.</td>
+</tr>
+<tr>
+<td><a href="./#incompatibletypemsg">incompatibleTypeMsg</a></td>
+<td>Return an error message for incompatible types.</td>
+</tr>
+<tr>
+<td><a href="./#incompatiblevalueerror">incompatibleValueError</a></td>
+<td>Stop the simulation with an error of a wrong value for an argument of a function.</td>
+</tr>
+<tr>
+<td><a href="./#incompatiblevaluemsg">incompatibleValueMsg</a></td>
+<td>Return an error message for incompatible values.</td>
+</tr>
+<tr>
+<td><a href="./#integerargument">integerArgument</a></td>
+<td>Verify whether a given argument is integer.</td>
+</tr>
+<tr>
+<td><a href="./#integerargumentmsg">integerArgumentMsg</a></td>
+<td>Return a message indicating that a given argument of a function should be integer.</td>
+</tr>
+<tr>
+<td><a href="./#integertableargument">integerTableArgument</a></td>
+<td>Verify whether a given argument of a named function is integer.</td>
+</tr>
+<tr>
+<td><a href="./#invalidfileextensionerror">invalidFileExtensionError</a></td>
+<td>Stop the simulation with an error indicating that the function does not support a given file extension.</td>
+</tr>
+<tr>
+<td><a href="./#invalidfileextensionmsg">invalidFileExtensionMsg</a></td>
+<td>Return a message indicating that a given file extension is incompatible.</td>
+</tr>
+<tr>
+<td><a href="./#mandatoryargument">mandatoryArgument</a></td>
+<td>Verify whether a given argument of a function with non-named arguments belongs to the correct type.</td>
+</tr>
+<tr>
+<td><a href="./#mandatoryargumenterror">mandatoryArgumentError</a></td>
+<td>Stop the simulation with an error indicating that a given argument is mandatory.</td>
+</tr>
+<tr>
+<td><a href="./#mandatoryargumentmsg">mandatoryArgumentMsg</a></td>
+<td>Return a message indicating that a given argument of a function is mandatory.</td>
+</tr>
+<tr>
+<td><a href="./#mandatorytableargument">mandatoryTableArgument</a></td>
+<td>Verify whether a named table contains a mandatory argument.</td>
+</tr>
+<tr>
+<td><a href="./#namedargumentsmsg">namedArgumentsMsg</a></td>
+<td>Return a message indicating that the arguments of a function must be named.</td>
+</tr>
+<tr>
+<td><a href="./#optionalargument">optionalArgument</a></td>
+<td>Verify whether an optional argument of a function with non-named arguments belongs to the correct type.</td>
+</tr>
+<tr>
+<td><a href="./#optionaltableargument">optionalTableArgument</a></td>
+<td>Verify whether a named table contains an optional argument.</td>
+</tr>
+<tr>
+<td><a href="./#positiveargument">positiveArgument</a></td>
+<td>Verify whether a given argument is positive.</td>
+</tr>
+<tr>
+<td><a href="./#positiveargumentmsg">positiveArgumentMsg</a></td>
+<td>Return a message indicating that a given argument of a function should be positive.</td>
+</tr>
+<tr>
+<td><a href="./#positivetableargument">positiveTableArgument</a></td>
+<td>Verify whether a given argument of a function with named arguments is positive.</td>
+</tr>
+<tr>
+<td><a href="./#resourcenotfounderror">resourceNotFoundError</a></td>
+<td>Stop the simulation with an error indicating that a given resource was not found.</td>
+</tr>
+<tr>
+<td><a href="./#resourcenotfoundmsg">resourceNotFoundMsg</a></td>
+<td>Return a message indicating that a given resource could not be found.</td>
+</tr>
+<tr>
+<td><a href="./#strictwarning">strictWarning</a></td>
+<td>Print a strict warning.</td>
+</tr>
+<tr>
+<td><a href="./#suggestion">suggestion</a></td>
+<td>Return a suggestion for a wrong string value.</td>
+</tr>
+<tr>
+<td><a href="./#suggestionmsg">suggestionMsg</a></td>
+<td>Return the arguments of suggestion within a question " Do you mean '#1'?".</td>
+</tr>
+<tr>
+<td><a href="./#switchinvalidargument">switchInvalidArgument</a></td>
+<td>Stop the simulation with an error because the user did not choose a correct option.</td>
+</tr>
+<tr>
+<td><a href="./#switchinvalidargumentmsg">switchInvalidArgumentMsg</a></td>
+<td>Return a message for a wrong argument value showing the options.</td>
+</tr>
+<tr>
+<td><a href="./#switchinvalidargumentsuggestionmsg">switchInvalidArgumentSuggestionMsg</a></td>
+<td>Return a message for a wrong argument value showing the most similar option.</td>
+</tr>
+<tr>
+<td><a href="./#tableargumentmsg">tableArgumentMsg</a></td>
+<td>Return a message indicating that the argument of a function must be a table.</td>
+</tr>
+<tr>
+<td><a href="./#unnecessaryargumentmsg">unnecessaryArgumentMsg</a></td>
+<td>Return a message indicating that a given argument is unnecessary.</td>
+</tr>
+<tr>
+<td><a href="./#valuenotfounderror">valueNotFoundError</a></td>
+<td>Stop the simulation with an error due to a wrong value for an argument.</td>
+</tr>
+<tr>
+<td><a href="./#valuenotfoundmsg">valueNotFoundMsg</a></td>
+<td>Return a message indicating that a given argument of a function is mandatory.</td>
+</tr>
+<tr>
+<td><a href="./#verify">verify</a></td>
+<td>Verify a given condition, otherwise it stops the simulation with an error.</td>
+</tr>
+<tr>
+<td><a href="./#verifynamedtable">verifyNamedTable</a></td>
+<td>Verify if a given object is a named table.</td>
+</tr>
+<tr>
+<td><a href="./#verifyunnecessaryarguments">verifyUnnecessaryArguments</a></td>
+<td>Verify whether the user has passed only the allowed arguments for a function, removing the unnecessary arguments and showing a strict warning otherwise.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="customerror"><strong>customError</strong></h2>
+<p>Stop the simulation with an error.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string describing the error message.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() customError("error message") end)
+print(err)</code></pre>
+<hr />
+<h2 id="customwarning"><strong>customWarning</strong></h2>
+<p>Print a warning. If TerraME is executing in the debug mode, it stops the simulation with an error.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string describing the warning.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>customWarning("warning message")</code></pre>
+<hr />
+<h2 id="defaulttablevalue"><strong>defaultTableValue</strong></h2>
+<p>Verify the default value of a given attribute of a named table. It adds the attribute with the default value in the table if it does not exist, stops with an error (<a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>) if the value has a different type, or shows a warning (<a href="./#defaultvaluewarning">defaultValueWarning()</a>) if it is equal to the default value.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table (which can be an argument for a function).</li>
+<li><strong>#2</strong>: A string with the name of an attribute (or argument) from #1.</li>
+<li><strong>#3</strong>: The default value (any type).</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>function integrate(attrs)
+    defaultTableValue(attrs, "method", "euler")
+    return attrs
+end
+
+t = integrate{}
+print(t.method)</code></pre>
+<hr />
+<h2 id="defaultvaluemsg"><strong>defaultValueMsg</strong></h2>
+<p>Return a message indicating that the modeler is using the default value for a given argument and therefore it could be removed. The string is "Argument '#1' could be removed as it is the default value ('#2').".  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument.</li>
+<li><strong>#2</strong>: A number or string or boolean value with the default value for the argument.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>str = defaultValueMsg("dbtype", "mysql")
+print(str)</code></pre>
+<hr />
+<h2 id="defaultvaluewarning"><strong>defaultValueWarning</strong></h2>
+<p>Show a strict warning if the attribute of a table has the default value. If TerraME is running in the debug mode, the simulation stops with an error. The warning message comes from <a href="./#defaultvaluemsg">defaultValueMsg()</a>.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument.</li>
+<li><strong>#2</strong>: The default value.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>str = defaultValueWarning("size", 2)
+print(str)</code></pre>
+<hr />
+<h2 id="deprecatedfunction"><strong>deprecatedFunction</strong></h2>
+<p>Show an error indicating a deprecated function. The error comes from <a href="./#deprecatedfunctionmsg">deprecatedFunctionMsg()</a>.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the deprecated function.</li>
+<li><strong>#2</strong>: A string indicating how to proceed to replace the deprecated function call.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>deprecatedFunc = function()
+    deprecatedFunction("abc", "def")
+end
+
+_, err = pcall(function() deprecatedFunc() end)
+print(err)</code></pre>
+<hr />
+<h2 id="deprecatedfunctionmsg"><strong>deprecatedFunctionMsg</strong></h2>
+<p>Return a message indicating that a function is deprecated and must be replaced. The string is "Function '#1' is deprecated. Use '#2' instead.".  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the deprecated function.</li>
+<li><strong>#2</strong>: A string indicating how to proceed to replace the deprecated function call.</li>
+</ul>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>str = deprecatedFunctionMsg("abc", "def")
+print(str)</code></pre>
+<hr />
+<h2 id="incompatibletypeerror"><strong>incompatibleTypeError</strong></h2>
+<p>Stop the simulation with an error of a wrong type for an argument of a function. The error message is the return value of <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument, or a number with its the position.</li>
+<li><strong>#2</strong>: A string with the possible type (or types).</li>
+<li><strong>#3</strong>: The value wrongly passed as argument.</li>
+</ul>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() incompatibleTypeError("cell", "Cell", Agent{}) end)
+print(err)</code></pre>
+<hr />
+<h2 id="incompatibletypemsg"><strong>incompatibleTypeMsg</strong></h2>
+<p>Return an error message for incompatible types. The string is "Incompatible types. Argument '#1' expected #2, got type(#3).".  </p>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument, or a number with its the position.</li>
+<li><strong>#2</strong>: A string with the possible type (or types). The default value is "nil".</li>
+<li><strong>#3</strong>: The value wrongly passed as argument.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>str = incompatibleTypeMsg("source", "string", 2)
+print(str)</code></pre>
+<hr />
+<h2 id="incompatiblevalueerror"><strong>incompatibleValueError</strong></h2>
+<p>Stop the simulation with an error of a wrong value for an argument of a function. The error message comes from <a href="./#incompatiblevaluemsg">incompatibleValueMsg()</a>.  </p>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument or a number with its position.</li>
+<li><strong>#2</strong>: A string with the expected value(s) for the argument.</li>
+<li><strong>#3</strong>: The value wrongly passed as argument.</li>
+</ul>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() incompatibleValueError("position", "one of {1, 2, 3}", 4) end)
+print(err)</code></pre>
+<hr />
+<h2 id="incompatiblevaluemsg"><strong>incompatibleValueMsg</strong></h2>
+<p>Return an error message for incompatible values. The string is "Incompatible values. Argument '#1' expected #2, got #3.".  </p>
+<h3 id="arguments_10">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument or a number with its position.</li>
+<li><strong>#2</strong>: A string with the expected value(s) for the argument.</li>
+<li><strong>#3</strong>: The value wrongly passed as argument.</li>
+</ul>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>str = incompatibleValueMsg("source", "one of {1, 3, 4}", 2)
+print(str)</code></pre>
+<hr />
+<h2 id="integerargument"><strong>integerArgument</strong></h2>
+<p>Verify whether a given argument is integer. It is useful only for functions with non-named arguments. The error message comes from <a href="./#integerargumentmsg">integerArgumentMsg()</a>.  </p>
+<h3 id="arguments_11">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number with the position of the argument in the function.</li>
+<li><strong>#2</strong>: The value used as argument to the function call.</li>
+</ul>
+<h3 id="usage_11">Usage</h3>
+<pre class="highlight"><code>sum = function(a, b)
+    integerArgument(1, a)
+    integerArgument(2, b)
+    return a + b
+end
+
+_, err = pcall(function() sum(5) end)
+print(err)</code></pre>
+<hr />
+<h2 id="integerargumentmsg"><strong>integerArgumentMsg</strong></h2>
+<p>Return a message indicating that a given argument of a function should be integer. It returns <a href="./#incompatiblevaluemsg">incompatibleValueMsg()</a> with "integer number" as #2.  </p>
+<h3 id="arguments_12">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument or a number with the position of the argument.</li>
+<li><strong>#2</strong>: The value used as argument to the function call.</li>
+</ul>
+<h3 id="usage_12">Usage</h3>
+<pre class="highlight"><code>str = integerArgumentMsg("target", 7.4)
+print(str)
+
+str = integerArgumentMsg(2, 5.1)
+print(str)</code></pre>
+<hr />
+<h2 id="integertableargument"><strong>integerTableArgument</strong></h2>
+<p>Verify whether a given argument of a named function is integer. The error message comes from <a href="./#integerargumentmsg">integerArgumentMsg()</a>.  </p>
+<h3 id="arguments_13">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table.</li>
+<li><strong>#2</strong>: A string with the name of the argument.</li>
+</ul>
+<h3 id="usage_13">Usage</h3>
+<pre class="highlight"><code>myFunction = function(mtable)
+    integerTableArgument(mtable, "value")
+end
+
+_, err = pcall(function() myFunction{value = false} end)
+print(err)</code></pre>
+<hr />
+<h2 id="invalidfileextensionerror"><strong>invalidFileExtensionError</strong></h2>
+<p>Stop the simulation with an error indicating that the function does not support a given file extension. The error message comes from <a href="./#invalidfileextensionmsg">invalidFileExtensionMsg()</a>.  </p>
+<h3 id="arguments_14">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument or a number with its position.</li>
+<li><strong>#2</strong>: A string with the incompatible file extension.</li>
+</ul>
+<h3 id="usage_14">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() invalidFileExtensionError("file", ".txt") end)
+print(err)</code></pre>
+<hr />
+<h2 id="invalidfileextensionmsg"><strong>invalidFileExtensionMsg</strong></h2>
+<p>Return a message indicating that a given file extension is incompatible. The string is "Argument '#1' does not support extension '#2'.".  </p>
+<h3 id="arguments_15">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument (for functions with named arguments), or its position (for functions with non-named arguments).</li>
+<li><strong>#2</strong>: A string with the incompatible file extension.</li>
+</ul>
+<h3 id="usage_15">Usage</h3>
+<pre class="highlight"><code>str = invalidFileExtensionMsg("file", "csv")
+print(str)</code></pre>
+<hr />
+<h2 id="mandatoryargument"><strong>mandatoryArgument</strong></h2>
+<p>Verify whether a given argument of a function with non-named arguments belongs to the correct type. The error message comes from <a href="./#mandatoryargumentmsg">mandatoryArgumentMsg()</a> and <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
+<h3 id="arguments_16">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number with the position of the argument in the function.</li>
+<li><strong>#2</strong>: A string with the required type for the argument.</li>
+<li><strong>#3</strong>: The value used as argument to the function call.</li>
+</ul>
+<h3 id="usage_16">Usage</h3>
+<pre class="highlight"><code>myFunction = function(value)
+    mandatoryArgument(1, "string", value)
+end
+
+_, err = pcall(function() myFunction(2) end)
+print(err)</code></pre>
+<hr />
+<h2 id="mandatoryargumenterror"><strong>mandatoryArgumentError</strong></h2>
+<p>Stop the simulation with an error indicating that a given argument is mandatory. The error message comes from <a href="./#mandatoryargumentmsg">mandatoryArgumentMsg()</a>.  </p>
+<h3 id="arguments_17">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with name of the argument or a number with its position in the function.</li>
+</ul>
+<h3 id="usage_17">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() mandatoryArgumentError(2) end)
+print(err)</code></pre>
+<hr />
+<h2 id="mandatoryargumentmsg"><strong>mandatoryArgumentMsg</strong></h2>
+<p>Return a message indicating that a given argument of a function is mandatory. The string is "Argument '#1' is mandatory.".  </p>
+<h3 id="arguments_18">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the argument. It can be a string or a number.</li>
+</ul>
+<h3 id="usage_18">Usage</h3>
+<pre class="highlight"><code>str = mandatoryArgumentMsg("target")
+print(str)
+
+str = mandatoryArgumentMsg(2)
+print(str)</code></pre>
+<hr />
+<h2 id="mandatorytableargument"><strong>mandatoryTableArgument</strong></h2>
+<p>Verify whether a named table contains a mandatory argument. It stops with an error if the value is nil or if it does not belong to the required type. The error message comes from <a href="./#mandatoryargumentmsg">mandatoryArgumentMsg()</a> or <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
+<h3 id="arguments_19">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table.</li>
+<li><strong>#2</strong>: A string with the argument name.</li>
+<li><strong>#3</strong>: A string with the required type for the argument, or a vector of strings with the allowed types. This argument is optional. If not used, then this function will check only if the argument is not nil.</li>
+</ul>
+<h3 id="usage_19">Usage</h3>
+<pre class="highlight"><code>myFunction = function(mtable)
+    mandatoryTableArgument(mtable, "value", "string")
+end
+
+_, err = pcall(function() myFunction{value = 2} end)
+print(err)</code></pre>
+<hr />
+<h2 id="namedargumentsmsg"><strong>namedArgumentsMsg</strong></h2>
+<p>Return a message indicating that the arguments of a function must be named. The string is "Arguments must be named.".  </p>
+<h3 id="usage_20">Usage</h3>
+<pre class="highlight"><code>str = namedArgumentsMsg()
+print(str)</code></pre>
+<hr />
+<h2 id="optionalargument"><strong>optionalArgument</strong></h2>
+<p>Verify whether an optional argument of a function with non-named arguments belongs to the correct type. If the argument is nil then no error is created. The error message comes from <a href="./#incompatibletypemsg">incompatibleTypeMsg()</a>.  </p>
+<h3 id="arguments_20">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number with the position of the argument in the function.</li>
+<li><strong>#2</strong>: A string with the required type for the argument.</li>
+<li><strong>#3</strong>: The value used as argument to the function call.</li>
+</ul>
+<h3 id="usage_21">Usage</h3>
+<pre class="highlight"><code>myFunction = function(value)
+    optionalArgument(1, "string", value)
+end
+
+_, err = pcall(function() myFunction(2) end)
+print(err)</code></pre>
+<hr />
+<h2 id="optionaltableargument"><strong>optionalTableArgument</strong></h2>
+<p>Verify whether a named table contains an optional argument. It stops with an error if the value is not nil and it has a type different from the required type. The error comes from <a href="./#incompatibletypeerror">incompatibleTypeError()</a>.  </p>
+<h3 id="arguments_21">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table.</li>
+<li><strong>#2</strong>: A string with the name of the argument.</li>
+<li><strong>#3</strong>: A string with the required type for the argument or a table with strings describing the allowed types.</li>
+</ul>
+<h3 id="usage_22">Usage</h3>
+<pre class="highlight"><code>myFunction = function(mtable)
+    optionalTableArgument(mtable, "value", "string")
+end
+
+_, err = pcall(function() myFunction{value = 2} end)
+print(err)</code></pre>
+<hr />
+<h2 id="positiveargument"><strong>positiveArgument</strong></h2>
+<p>Verify whether a given argument is positive. It is useful only for functions with non-named arguments. The error message comes from <a href="./#positiveargumentmsg">positiveArgumentMsg()</a>.  </p>
+<h3 id="arguments_22">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number with the position of the argument in the function.</li>
+<li><strong>#2</strong>: The value used as argument to the function call.</li>
+<li><strong>#3</strong>: A boolean value indicating whether zero should be included (the default value is false).</li>
+</ul>
+<h3 id="usage_23">Usage</h3>
+<pre class="highlight"><code>positiveSum = function(a, b)
+    positiveArgument(1, a)
+    positiveArgument(2, b)
+    return a + b
+end
+
+_, err = pcall(function() positiveSum(5, -2) end)
+print(err)</code></pre>
+<hr />
+<h2 id="positiveargumentmsg"><strong>positiveArgumentMsg</strong></h2>
+<p>Return a message indicating that a given argument of a function should be positive. It returns <a href="./#incompatiblevaluemsg">incompatibleValueMsg()</a> with "positive number (including/excluding zero)" as #2.  </p>
+<h3 id="arguments_23">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The name of the argument. It can be a string or a number.</li>
+<li><strong>#2</strong>: The value used as argument to the function call.</li>
+<li><strong>#3</strong>: A boolean value indicating whether zero should be included (the default value is false).</li>
+</ul>
+<h3 id="usage_24">Usage</h3>
+<pre class="highlight"><code>str = positiveArgumentMsg("target", -5)
+print(str)
+
+str = positiveArgumentMsg(2, -2, true)
+print(str)</code></pre>
+<hr />
+<h2 id="positivetableargument"><strong>positiveTableArgument</strong></h2>
+<p>Verify whether a given argument of a function with named arguments is positive. The error message comes from <a href="./#positiveargumentmsg">positiveArgumentMsg()</a>.  </p>
+<h3 id="arguments_24">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table.</li>
+<li><strong>#2</strong>: A string with the name of the argument.</li>
+<li><strong>#3</strong>: A boolean value indicating whether zero should be included (the default value is false).</li>
+</ul>
+<h3 id="usage_25">Usage</h3>
+<pre class="highlight"><code>myFunction = function(mtable)
+    positiveTableArgument(mtable, "value")
+end
+
+_, err = pcall(function() myFunction{value = -2} end)
+print(err)</code></pre>
+<hr />
+<h2 id="resourcenotfounderror"><strong>resourceNotFoundError</strong></h2>
+<p>Stop the simulation with an error indicating that a given resource was not found. The error message comes from <a href="./#resourcenotfoundmsg">resourceNotFoundMsg()</a>.  </p>
+<h3 id="arguments_25">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument, or its position.</li>
+<li><strong>#2</strong>: A string with the location of the resource.</li>
+</ul>
+<h3 id="usage_26">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() resourceNotFoundError("file", "file.txt") end)
+print(err)</code></pre>
+<hr />
+<h2 id="resourcenotfoundmsg"><strong>resourceNotFoundMsg</strong></h2>
+<p>Return a message indicating that a given resource could not be found. The string is "<a href="../../types/file/">File</a>/Resource '#1' was not found for argument '#2'.".  </p>
+<h3 id="arguments_26">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument, or its position.</li>
+<li><strong>#2</strong>: A File or a string with the location of the resource.</li>
+</ul>
+<h3 id="usage_27">Usage</h3>
+<pre class="highlight"><code>str = resourceNotFoundMsg("file", "c:\\myfiles\\file.csv")
+print(str)</code></pre>
+<hr />
+<h2 id="strictwarning"><strong>strictWarning</strong></h2>
+<p>Print a strict warning. This warning is shown only in the strict mode. If TerraME is executing in the debug mode, it stops the simulation with an error.  </p>
+<h3 id="arguments_27">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string describing the warning.</li>
+</ul>
+<h3 id="usage_28">Usage</h3>
+<pre class="highlight"><code>strictWarning("warning message")</code></pre>
+<hr />
+<h2 id="suggestion"><strong>suggestion</strong></h2>
+<p>Return a suggestion for a wrong string value. The suggestion must have a Levenshtein's distance of less than 60% the size of the string, otherwise it returns nil.  </p>
+<h3 id="arguments_28">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string.</li>
+<li><strong>#2</strong>: A named table with the possible suggestions. It can also be a vector of strings.</li>
+</ul>
+<h3 id="usage_29">Usage</h3>
+<pre class="highlight"><code>t = {
+    blue = true,
+    red = true,
+    green = true
+}
+
+str = suggestion("gren", t)
+print(str)</code></pre>
+<hr />
+<h2 id="suggestionmsg"><strong>suggestionMsg</strong></h2>
+<p>Return the arguments of suggestion within a question " Do you mean '#1'?".  </p>
+<h3 id="arguments_29">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string.</li>
+</ul>
+<h3 id="usage_30">Usage</h3>
+<pre class="highlight"><code>t = {
+    blue = true,
+    red = true,
+    green = true
+}
+
+str = suggestionMsg(suggestion("gren", t))
+print(str)</code></pre>
+<hr />
+<h2 id="switchinvalidargument"><strong>switchInvalidArgument</strong></h2>
+<p>Stop the simulation with an error because the user did not choose a correct option. This function supposes that there is a set of available options described as string idexes of a table so it tries to find an approximate string to be shown as a suggestion. Otherwise, it shows all the available options. The error messages come from <a href="./#switchinvalidargumentsuggestionmsg">switchInvalidArgumentSuggestionMsg()</a> and <a href="./#switchinvalidargumentmsg">switchInvalidArgumentMsg()</a>.  </p>
+<h3 id="arguments_30">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument.</li>
+<li><strong>#2</strong>: A string with wrong value passed as argument.</li>
+<li><strong>#3</strong>: A named table describing the available options.</li>
+</ul>
+<h3 id="usage_31">Usage</h3>
+<pre class="highlight"><code>t = {
+    blue = true,
+    red = true,
+    green = true
+}
+
+_, err = pcall(function() switchInvalidArgument("attribute", "gren", t) end)
+print(err)</code></pre>
+<hr />
+<h2 id="switchinvalidargumentmsg"><strong>switchInvalidArgumentMsg</strong></h2>
+<p>Return a message for a wrong argument value showing the options. The string is "'#1' is an invalid value for argument '#2'. It must be a string from the set [#3].".  </p>
+<h3 id="arguments_31">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the value of the argument.</li>
+<li><strong>#2</strong>: A string with the name of the argument.</li>
+<li><strong>#3</strong>: A named table indicating the available options.</li>
+</ul>
+<h3 id="usage_32">Usage</h3>
+<pre class="highlight"><code>local options = {
+    aaa = true,
+    bbb = true,
+    ccc = true
+}
+
+str = switchInvalidArgumentMsg("ddd", "attr", options)
+print(str)</code></pre>
+<hr />
+<h2 id="switchinvalidargumentsuggestionmsg"><strong>switchInvalidArgumentSuggestionMsg</strong></h2>
+<p>Return a message for a wrong argument value showing the most similar option. The string is "'#1' is an invalid value for argument '#2'. suggestionMsg(#3)".  </p>
+<h3 id="arguments_32">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the value of the argument.</li>
+<li><strong>#2</strong>: A string with the name of the argument.</li>
+<li><strong>#3</strong>: A string with a suggestion to replace the wrong value.</li>
+</ul>
+<h3 id="usage_33">Usage</h3>
+<pre class="highlight"><code>str = switchInvalidArgumentSuggestionMsg("aab", "attr", "aaa")
+print(str)</code></pre>
+<hr />
+<h2 id="tableargumentmsg"><strong>tableArgumentMsg</strong></h2>
+<p>Return a message indicating that the argument of a function must be a table. The string is "Argument must be a table.".  </p>
+<h3 id="usage_34">Usage</h3>
+<pre class="highlight"><code>str = tableArgumentMsg()
+print(str)</code></pre>
+<hr />
+<h2 id="unnecessaryargumentmsg"><strong>unnecessaryArgumentMsg</strong></h2>
+<p>Return a message indicating that a given argument is unnecessary. The string is "Argument '#1' is unnecessary. suggestionMsg(#2)".  </p>
+<h3 id="arguments_33">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string or number or boolean value.</li>
+<li><strong>#2</strong>: A possible suggestion for the argument. This argument is optional.</li>
+</ul>
+<h3 id="usage_35">Usage</h3>
+<pre class="highlight"><code>str = unnecessaryArgumentMsg("file")
+print(str)
+
+str = unnecessaryArgumentMsg("filf", "file")
+print(str)</code></pre>
+<hr />
+<h2 id="valuenotfounderror"><strong>valueNotFoundError</strong></h2>
+<p>Stop the simulation with an error due to a wrong value for an argument. The error message comes from <a href="./#valuenotfoundmsg">valueNotFoundMsg()</a>.  </p>
+<h3 id="arguments_34">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument or a number with its position.</li>
+<li><strong>#2</strong>: The value used as argument to the function call.</li>
+</ul>
+<h3 id="usage_36">Usage</h3>
+<pre class="highlight"><code>_, err = pcall(function() valueNotFoundError(1, "neighborhood") end)
+print(err)</code></pre>
+<hr />
+<h2 id="valuenotfoundmsg"><strong>valueNotFoundMsg</strong></h2>
+<p>Return a message indicating that a given argument of a function is mandatory. The string is "Value '#2' not found for argument '#1'.".  </p>
+<h3 id="arguments_35">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the argument or a number with its position.</li>
+<li><strong>#2</strong>: The valued used as argument to the function call.</li>
+</ul>
+<h3 id="usage_37">Usage</h3>
+<pre class="highlight"><code>str = valueNotFoundMsg(1, "neighborhood")
+print(str)</code></pre>
+<hr />
+<h2 id="verify"><strong>verify</strong></h2>
+<p>Verify a given condition, otherwise it stops the simulation with an error.  </p>
+<h3 id="arguments_36">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A value of any type. If it is false or nil, the function generates an error.</li>
+<li><strong>#2</strong>: A string with the error to be displayed.</li>
+</ul>
+<h3 id="usage_38">Usage</h3>
+<pre class="highlight"><code>greater = function(a, b)
+    verify(a &gt; b, "#1 is not greater than #2.")
+end
+
+_, err = pcall(function() greater(5, 7) end)
+print(err)</code></pre>
+<hr />
+<h2 id="verifynamedtable"><strong>verifyNamedTable</strong></h2>
+<p>Verify if a given object is a named table. It generates errors if it is nil, if it is not a table, or if it has numeric names. The error messages come from <a href="./#tableargumentmsg">tableArgumentMsg()</a> and <a href="./#namedargumentsmsg">namedArgumentsMsg()</a>.  </p>
+<h3 id="arguments_37">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A value of any type.</li>
+</ul>
+<h3 id="usage_39">Usage</h3>
+<pre class="highlight"><code>myFunction = function(mtable)
+    verifyNamedTable(mtable)
+end
+
+_, err = pcall(function() myFunction{1, 2, 3} end)
+print(err)</code></pre>
+<hr />
+<h2 id="verifyunnecessaryarguments"><strong>verifyUnnecessaryArguments</strong></h2>
+<p>Verify whether the user has passed only the allowed arguments for a function, removing the unnecessary arguments and showing a strict warning otherwise. The warning comes from <a href="./#unnecessaryargumentmsg">unnecessaryArgumentMsg()</a>. It is recommended that this function should be called as early as possible, in order to show the warning before any error that might be related to it. This function removes each unnecessary argument from #1.  </p>
+<h3 id="arguments_38">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A named table with the arguments used in the function call. The names of this table will be verified.</li>
+<li><strong>#2</strong>: A vector with the allowed arguments.</li>
+</ul>
+<h3 id="usage_40">Usage</h3>
+<pre class="highlight"><code>myFunction = function(mtable)
+    verifyUnnecessaryArguments(mtable, {"aaa", "bbb", "ccc"})
+end
+
+_, err = pcall(function() myFunction{aaa = 3, value = 2} end)
+print(err)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../types/visualTable/" class="btn btn-neutral float-left" title="VisualTable"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../os/" class="btn btn-neutral float-right" title="Os">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../types/visualTable/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../os/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

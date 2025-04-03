@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Chart - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Chart";
+        var mkdocs_page_input_path = "base/types/chart.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Chart</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear">clear</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getdata">getData</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#restart">restart</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save">save</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#update">update</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Chart</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="chart">Chart</h1>
+<p>Create a line chart showing the variation of one or more attributes (y axis) of an object. As default, x axis values come from the single argument of <a href="./#update">update()</a>. A Chart behaves according to its target's type. See the table below.  </p>
+<table>
+<thead>
+<tr>
+<th>Type of the target</th>
+<th>Behavior</th>
+<th>Compulsory</th>
+<th>Unnecessary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"<a href="../agent/">Agent</a>", "<a href="../cell/">Cell</a>", instance of a <a href="../model/">Model</a></td>
+<td>Plots how attributes change over time.</td>
+<td>target</td>
+<td>value</td>
+</tr>
+<tr>
+<td>"<a href="../cellularSpace/">CellularSpace</a>"</td>
+<td>If the selected attributes belong to the <a href="../cellularSpace/">CellularSpace</a>, it plots how attributes change over time. If only one attribute is selected and it belongs to the <a href="../cell/">Cells</a>, then it plots the sum of the attribute values in the whole CellularSpace.</td>
+<td>select, target</td>
+<td></td>
+</tr>
+<tr>
+<td>"<a href="../map/">Map</a>"</td>
+<td>Works as a Chart created from a <a href="../cellularSpace/">CellularSpace</a>, copying the values of arguments target, select, value, color, and label from the <a href="../map/">Map</a> to itself. It only works if the Map was created using grouping "uniquevalue". If some of the colors is white, the respective attribute value will be ignored by the Chart.</td>
+<td>target</td>
+<td>color, label, select, value</td>
+</tr>
+<tr>
+<td>"<a href="../environment/">Environment</a>"</td>
+<td>Plot how a given attribute from different <a href="../model/">Models</a>.</td>
+<td>select, target</td>
+<td>value</td>
+</tr>
+<tr>
+<td>"<a href="../society/">Society</a>"</td>
+<td>Plot how attributes change over time. If no attribute is selected, it will plot the amount of <a href="../agent/">Agents</a> along the simulation.</td>
+<td>target</td>
+<td></td>
+</tr>
+<tr>
+<td>"<a href="../dataFrame/">DataFrame</a>"</td>
+<td>Plot a set of values at once, without needing to call <a href="./#update">Chart:update()</a>.</td>
+<td>target</td>
+<td>value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>color</strong>: An optional table where each position is a color for the respective attribute, described as strings ("red", "green", "blue", "white", "black", "yellow", "brown", "cyan", "gray", "magenta", "orange", "purple", and their light and dark compositions, such as "lightGray" and "darkGray"), or as tables with three integer numbers representing RGB compositions.</li>
+<li><strong>label</strong>: Vector of the same size of select that indicates the labels for each line of the Chart. The default value is the name of the attributes using <a href="../../functions/utils/#tolabel">toLabel()</a>.</li>
+<li><strong>pen</strong>: The pen style for drawing lines. It can be one of "solid" (default), "dash", "dot", "dashdot", or "dashdotdot". It can be a vector or a single value.</li>
+<li><strong>select</strong>: A vector of strings with the name of the attributes to be observed. If it is only a single value then it can also be described as a string. As default, it selects all the user-defined number attributes of the target. In the case of <a href="../society/">Society</a>, if it does not have any numeric attributes then it will use the number of agents in the Society as attribute. The positions of the vector define the plot order. It draws starting from the first until the last position. When using an <a href="../environment/">Environment</a> as target, it is possible to use only one attribute name. The selected attribute must belong to the <a href="../model/">Model</a> instances it contains. Chart will then create one line for each Model instance. In this case, the selected attribute will be the default title for the Chart and the default labels will be the names of the Model instances in the Environment (if they are named) or else their <a href="../model/#title">Model:title()</a> values.</li>
+<li><strong>size</strong>: The size of the symbol, in pixels. It can be a number to be used by all lines. or a vector of numbers, describing the size for each line. The default value is 7.</li>
+<li><strong>style</strong>: The style of each line to be drawn. It can be a string, indicating that all lines will have the same style, or a vector of strings describing each line. The possible values are: "lines", "dots", "none", "steps", and "sticks". The default value is "lines" for all lines.</li>
+<li><strong>symbol</strong>: The symbol to be used to draw the points of the Chart. It can be a string to be used by all lines, or a vector of strings, describing the symbol for each line. The available values are: "square", "diamond", "triangle", "ltriangle" (left), "dtriangle" (downwards triangle), "rtriangle" (right), "cross", "vcross" (vertical cross), "hline", "vline", "asterisk", "star", "hexagon", and "none" (default).</li>
+<li><strong>target</strong>: The object to be observed.</li>
+<li><strong>title</strong>: An overall title to the Chart. The default value is "". In the case of instances of Models, the default is <a href="../model/#title">Model:title()</a>. When the title is a Model instance, it automatically uses the <a href="../model/#title">Model:title()</a> as its value.</li>
+<li><strong>value</strong>: A vector of strings with the values to be observed. It is necessary when observing automatic functions from <a href="../cellularSpace/">CellularSpace</a> or Society that are created from string attributes. In this case, Chart will plot the quantity of each value described in this argument.</li>
+<li><strong>width</strong>: The width of the lines to be drawn. It can be a number, indicating that all lines will be drawn with the same width, or a vector describing each line. The default value is width one for all lines.</li>
+<li><strong>xAxis</strong>: Name of the attribute to be used as x axis (instead of time). In this case, notify() will not need its single argument for plotting Charts.</li>
+<li><strong>xLabel</strong>: Name of the x-axis. It shows "Time" as default.</li>
+<li><strong>yLabel</strong>: Name of the y-axis. It does not show any label as default.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    xdim = 10,
+    value1 = 5,
+    value2 = 7
+}
+
+chart = Chart{target = cs}
+
+print(type(chart))
+
+world = Cell{
+    susceptible = 498,
+    recovered = 0,
+    infected = 2
+}
+
+Chart{
+    target = world,
+    width = 2,
+    select = {"susceptible", "infected", "recovered"},
+    style = {"dots", "steps", "sticks"},
+    color = {"red", "green", "blue"}
+}
+
+data = DataFrame{
+    first = 2000,
+    step = 10,
+    demand = {7, 8, 9, 10},
+    limit = {0.1, 0.04, 0.3, 0.07}
+}
+
+Chart{
+    target = data,
+    select = "limit",
+    color = "blue"
+}</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#clear">clear</a></td>
+<td>Clear the Chart.</td>
+</tr>
+<tr>
+<td><a href="./#getdata">getData</a></td>
+<td>Return a <a href="../dataFrame/">DataFrame</a> with the values got from all its updates.</td>
+</tr>
+<tr>
+<td><a href="./#restart">restart</a></td>
+<td>Restart the Chart keeping the old plots.</td>
+</tr>
+<tr>
+<td><a href="./#save">save</a></td>
+<td>Save a Chart into a file.</td>
+</tr>
+<tr>
+<td><a href="./#update">update</a></td>
+<td>Update the Chart with the latest values of its target.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="clear"><strong>clear</strong></h2>
+<p>Clear the Chart.  </p>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>cell = Cell{value = 1}
+chart = Chart{target = cell}
+chart:update(1)
+chart:update(2)
+chart:clear()</code></pre>
+<hr />
+<h2 id="getdata"><strong>getData</strong></h2>
+<p>Return a <a href="../dataFrame/">DataFrame</a> with the values got from all its updates.  </p>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    xdim = 10,
+    value1 = 5,
+    value2 = 7
+}
+
+chart = Chart{target = cs}
+
+chart:update(1)
+chart:update(2)
+chart:update(3)
+
+data = chart:getData()
+print(tostring(data))</code></pre>
+<hr />
+<h2 id="restart"><strong>restart</strong></h2>
+<p>Restart the Chart keeping the old plots.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>cell = Cell{value = 1}
+chart = Chart{target = cell}
+chart:update(1)
+chart:update(2)
+chart:restart()
+chart:update(2)
+chart:update(3)</code></pre>
+<hr />
+<h2 id="save"><strong>save</strong></h2>
+<p>Save a Chart into a file. Supported extensions are bmp, jpg, png, and tiff.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the file name.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    xdim = 10,
+    value1 = 5,
+    value2 = 7
+}
+
+chart = Chart{target = cs}
+
+chart:update(1)
+chart:update(2)
+chart:update(3)
+chart:save("file.bmp")
+File("file.bmp"):delete()</code></pre>
+<hr />
+<h2 id="update"><strong>update</strong></h2>
+<p>Update the Chart with the latest values of its target. It is usually recommended to use the Chart as action of an <a href="../event/">Event</a> instead of calling this function explicitly.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number with the current time or an Event.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>cell = Cell{value = 1}
+chart = Chart{target = cell}
+
+chart:update(0)
+chart:update(1)
+chart:update(2)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cellularSpace/" class="btn btn-neutral float-left" title="CellularSpace"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../choice/" class="btn btn-neutral float-right" title="Choice">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cellularSpace/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../choice/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

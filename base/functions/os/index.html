@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Os - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Os";
+        var mkdocs_page_input_path = "base/functions/os.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Functions</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Os</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#currentdir">currentDir</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isdirectory">isDirectory</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isfile">isFile</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#openwebpage">openWebpage</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#runcommand">runCommand</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sessioninfo">sessionInfo</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Functions</li>
+      <li class="breadcrumb-item active">Os</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="os">OS</h1>
+<p>Functions to handle files and directories. Most of the functions bellow are taken from LuaFileSystem 1.6.2. Copyright Kepler Project 2003 (<a href="https://keplerproject.github.io/luafilesystem">https://keplerproject.github.io/luafilesystem</a>).</p>
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#currentdir">currentDir</a></td>
+<td>Return a <a href="../../types/directory/">Directory</a> with the current working directory.</td>
+</tr>
+<tr>
+<td><a href="./#isdirectory">isDirectory</a></td>
+<td>Return if a given path represents a directory that exists.</td>
+</tr>
+<tr>
+<td><a href="./#isfile">isFile</a></td>
+<td>Return if a given file path exists.</td>
+</tr>
+<tr>
+<td><a href="./#openwebpage">openWebpage</a></td>
+<td>Opens a webpage in a Web Browser.</td>
+</tr>
+<tr>
+<td><a href="./#runcommand">runCommand</a></td>
+<td>Execute a system command and return its output.</td>
+</tr>
+<tr>
+<td><a href="./#sessioninfo">sessionInfo</a></td>
+<td>Return information about the current execution.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="currentdir"><strong>currentDir</strong></h2>
+<p>Return a <a href="../../types/directory/">Directory</a> with the current working directory.  </p>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>cdir = currentDir()
+print(cdir)</code></pre>
+<hr />
+<h2 id="isdirectory"><strong>isDirectory</strong></h2>
+<p>Return if a given path represents a directory that exists.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with a path.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>print(isDirectory("/home/user/mydirectory"))</code></pre>
+<hr />
+<h2 id="isfile"><strong>isFile</strong></h2>
+<p>Return if a given file path exists.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with a file path.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>print(isFile("abc.lua"))</code></pre>
+<hr />
+<h2 id="openwebpage"><strong>openWebpage</strong></h2>
+<p>Opens a webpage in a Web Browser.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the webpage to be opened.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>openWebpage("www.terrame.org")</code></pre>
+<hr />
+<h2 id="runcommand"><strong>runCommand</strong></h2>
+<p>Execute a system command and return its output. It returns two tables. The first one contains each standard output line as a position. The second one contains each error output line as a position.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A command.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>result, error = runCommand("dir")</code></pre>
+<hr />
+<h2 id="sessioninfo"><strong>sessionInfo</strong></h2>
+<p>Return information about the current execution. The result is a table with the values below. Some of them are read only, while others might be changed accordingly.  </p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+<th>Read only?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>autoclose</td>
+<td>When a simulation creates graphical components (<a href="../../types/chart/">Chart</a>, <a href="../../types/map/">Map</a>, etc.), TerraME waits for the modeler to close them to finish its execution. This attribute is a boolean value indicating whether TerraME should be automatically closed after executing the simulation.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>color</td>
+<td>A boolean value indicating whether text output might be colored. If colored, errors are shown red, warnings are shown yellow, and some prints in executions like -test and -doc might be green. This option can only be set from TerraME command line (-color).</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>currentFile</td>
+<td>A <a href="../../types/file/">File</a> with the name of the file currently being executed. This value only exists when the file is passed as argument to the command line.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>initialDir</td>
+<td>A <a href="../../types/directory/">Directory</a> where TerraME was executed. Whenever TerraME needs to <a href="../package/#import">import()</a> a package and cannot find it in the installed packages, it tries to load from this directory.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>dbVersion</td>
+<td>A string with the current TerraLib version for databases.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>fullTraceback</td>
+<td>A boolean value indicating whether TerraME should show all the stack when an error occurs. This means that the lines from base package and internal files are also going to be shown when an error occurs. As default, TerraME does not show such lines. This value can be set from TerraME command line (-ft).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>graphics</td>
+<td>A boolean value indicating whether the graphics are enabled. If false and one creates a <a href="../../types/chart/">Chart</a>, <a href="../../types/map/">Map</a>, or any other object that has a graphical interface, it will not be shown. Because of that, it will not be possible to save the output from these objects. TerraME starts with graphics enabled (true).</td>
+<td>No</td>
+</tr>
+<tr>
+<td>interface</td>
+<td>A boolean value indicating whether a graphical interface to configure models is running. When this value is true, <a href="../utils/#tolabel">toLabel()</a> converts errors to more readable texts referring to graphical objects instead of <a href="../../types/model/">Model</a> arguments.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>A string with the current mode for warnings ("normal", "debug", "quiet", or "strict"). Run terrame -help for a description of such modes.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>path</td>
+<td>A string with the location of TerraME in the computer.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>round</td>
+<td>A number used whenever it is possible to have rounding problems. For instance, it works with <a href="../../types/event/">Events</a> that have period less than one by rounding the execution time of an Event that is going to be scheduled to a future time if the difference between such time and the closest integer number is less then the value of this argument. In this case, if an Event that starts in time one and has period 0.1, it might execute in time 1.999999999, as we are working with real number. This argument is then useful to make sure that such Event will be executed in time exactly two. The default value is 1e-5. There is a function to compare numbers called <a href="../utils/#equals">equals()</a>, that uses this value internally.</td>
+<td>No</td>
+</tr>
+<tr>
+<td>separator</td>
+<td>A character with the directory separator. Each operational system has its own separator.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>silent</td>
+<td>A boolean value indicating whether print() calls should not be shown. This value can only be set from TerraME command line (-silent).</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>system</td>
+<td>A string with the operating system. It is one of "windows", "linux", or "mac".</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>time</td>
+<td>A number with the execution time of TerraME in seconds.</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>version</td>
+<td>A string with the current version of TerraME.</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>print(sessionInfo().mode)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../errorHandling/" class="btn btn-neutral float-left" title="ErrorHandling"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../package/" class="btn btn-neutral float-right" title="Package">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../errorHandling/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../package/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

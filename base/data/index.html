@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Data - TerraME</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Data";
+        var mkdocs_page_input_path = "base/data.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../..">
+          <img src="../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Types</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../types/agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../types/visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Data</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+      <li class="breadcrumb-item active">Data</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="data">Data</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#agents.csv">agents.csv</a></td>
+<td>A simple set of four Agents.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#amazonia.shp">amazonia.shp</a></td>
+<td>Cellular data representing the Amazonia region, in Brazil.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#brazilstates.shp">brazilstates.shp</a></td>
+<td>A shapefile describing the 27 Brazilian states.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#cabecadeboi-neigh.gpm">cabecadeboi-neigh.gpm</a></td>
+<td>Neighborhood files to be used with cabecadeboi database.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#cabecadeboi.shp">cabecadeboi.shp</a></td>
+<td>Topography data from Cabeca de Boi mountain, Minas Gerais, Brazil, with 100x100m of resolution.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#cabecadeboi800.shp">cabecadeboi800.shp</a></td>
+<td>Topography data from Cabeca de Boi mountain, Minas Gerais, Brazil, with 800x800m of resolution.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#emas.shp">emas.shp</a></td>
+<td>Cellular data representing Emas National Park, Brazil.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#gpmlinesDbEmas.gpm">gpmlinesDbEmas.gpm</a></td>
+<td>Neighborhood files to be used with emas database.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#river.shp">river.shp</a></td>
+<td>A line describing a river within Emas National Park, in Goias, Brazil.</td>
+</tr>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#simple.pgm">simple.pgm</a></td>
+<td>A simple CellularSpace with one attribute for sugarscape model.</td>
+</tr>
+</tbody>
+</table>
+<h1 id="directory">Directory</h1>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://localhost:5500/old/files/data.html#test">test</a></td>
+<td>Directory with files used only for internal tests.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="agentscsv">agents.csv</h2>
+<p>A simple set of four Agents.</p>
+<ul>
+<li><strong>File:</strong> <a href="http://localhost:5500/data/agents.csv">agents.csv</a></li>
+<li><strong>Quantity:</strong> 5</li>
+<li><strong>Separator:</strong> ","</li>
+<li><strong>Source:</strong> TerraME team</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>age</td>
+<td>number</td>
+<td>Age of the agent.</td>
+</tr>
+<tr>
+<td>immune</td>
+<td>string</td>
+<td>Whether the agent is immune.</td>
+</tr>
+<tr>
+<td>metabolism</td>
+<td>number</td>
+<td>Energy consumed by time step.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>Name of the agents.</td>
+</tr>
+<tr>
+<td>vision</td>
+<td>number</td>
+<td>Distance in cells the agent can see.</td>
+</tr>
+<tr>
+<td>wealth</td>
+<td>number</td>
+<td>Amount of sugar the agent starts with.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="amazoniashp">amazonia.shp</h2>
+<p><img alt="" src="http://localhost:5500/images/amazonia.png" /></p>
+<p>Cellular data representing the Amazonia region, in Brazil. It has 50x50km of resolution.</p>
+<ul>
+<li><strong>Files:</strong> <a href="http://localhost:5500/data/amazonia.dbf">amazonia.dbf</a>, <a href="http://localhost:5500/data/amazonia.prj">amazonia.prj</a>, <a href="http://localhost:5500/data/amazonia.shp">amazonia.shp</a>, <a href="http://localhost:5500/data/amazonia.shx">amazonia.shx</a></li>
+<li><strong>Representation:</strong> polygon</li>
+<li><strong>Quantity:</strong> 2229</li>
+<li><strong>Projection:</strong> 'USER:900914', with EPSG: 900914 (PROJ4: '+proj=lcc +lat_0=29.6666666666667 +lon_0=-100.333333333333 +lat_1=31.8833333333333 +lat_2=30.1166666666667 +x_0=2296583.333333 +y_0=9842500 +datum=NAD83 +units=m +no_defs')</li>
+<li><strong>Source:</strong> This data is a copy of the file with the same name created by terralib package.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col</td>
+<td>number</td>
+<td>Cell's column.</td>
+</tr>
+<tr>
+<td>distports</td>
+<td>number</td>
+<td>Distance to ports.</td>
+</tr>
+<tr>
+<td>distroads</td>
+<td>number</td>
+<td>Distance to roads.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Unique identifier (internal value).</td>
+</tr>
+<tr>
+<td>prodes_10</td>
+<td>number</td>
+<td>Percentage of clear-cut area.</td>
+</tr>
+<tr>
+<td>prodes_208</td>
+<td>number</td>
+<td>Percentage of forest area.</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>number</td>
+<td>Percentage of indigenous area.</td>
+</tr>
+<tr>
+<td>row</td>
+<td>number</td>
+<td>Cell's row.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="brazilstatesshp">brazilstates.shp</h2>
+<p>A shapefile describing the 27 Brazilian states.</p>
+<ul>
+<li><strong>Files:</strong> <a href="http://localhost:5500/data/brazilstates.dbf">brazilstates.dbf</a>, <a href="http://localhost:5500/data/brazilstates.shp">brazilstates.shp</a>, <a href="http://localhost:5500/data/brazilstates.shx">brazilstates.shx</a></li>
+<li><strong>Representation:</strong> polygon</li>
+<li><strong>Quantity:</strong> 27</li>
+<li><strong>Projection:</strong> Undefined, with EPSG: 0 (PROJ4: Undefined)</li>
+<li><strong>Source:</strong> IBGE (<a href="http://www.ibge.gov.br/">http://www.ibge.gov.br</a>)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CAPITAL</td>
+<td>string</td>
+<td>Name of the state's capital.</td>
+</tr>
+<tr>
+<td>NOME_UF</td>
+<td>string</td>
+<td>Name of the state.</td>
+</tr>
+<tr>
+<td>POPUL</td>
+<td>number</td>
+<td>Population of the state.</td>
+</tr>
+<tr>
+<td>SIGLA</td>
+<td>string</td>
+<td>State's initials.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cabecadeboi-neighgpm">cabecadeboi-neigh.gpm</h2>
+<p>Neighborhood files to be used with cabecadeboi database.</p>
+<ul>
+<li><strong>File:</strong> <a href="http://localhost:5500/data/cabecadeboi-neigh.gpm">cabecadeboi-neigh.gpm</a></li>
+<li><strong>Connected file/layer:</strong> cabecadeboi900.shp</li>
+<li><strong>Number of origins:</strong> 121</li>
+<li><strong>Number of connections:</strong> 1236</li>
+<li><strong>Source:</strong> TerraME team</li>
+</ul>
+<hr />
+<h2 id="cabecadeboishp">cabecadeboi.shp</h2>
+<p><img alt="" src="http://localhost:5500/images/cabeca.png" /></p>
+<p>Topography data from Cabeca de Boi mountain, Minas Gerais, Brazil, with 100x100m of resolution.</p>
+<ul>
+<li><strong>Files:</strong> <a href="http://localhost:5500/data/cabecadeboi.dbf">cabecadeboi.dbf</a>, <a href="http://localhost:5500/data/cabecadeboi.prj">cabecadeboi.prj</a>, <a href="http://localhost:5500/data/cabecadeboi.shp">cabecadeboi.shp</a>, <a href="http://localhost:5500/data/cabecadeboi.shx">cabecadeboi.shx</a></li>
+<li><strong>Representation:</strong> polygon</li>
+<li><strong>Quantity:</strong> 8100</li>
+<li><strong>Projection:</strong> <a href="https://epsg.io/2311">'WGS 84 / TM 6 NE', with EPSG: 2311 (PROJ4: '+proj=tmerc +lat_0=0 +lon_0=6 +k=0.9996 +x_0=500000 +y_0=0 +datum=WGS84 +units=m +no_defs')</a></li>
+<li><strong>Source:</strong> This data is a copy of the file with the same name created by terralib package.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col</td>
+<td>number</td>
+<td>Cell's column.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>number</td>
+<td>Height of the Cell, measured in values between 0 and 255.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Unique identifier (internal value).</td>
+</tr>
+<tr>
+<td>row</td>
+<td>number</td>
+<td>Cell's row.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cabecadeboi800shp">cabecadeboi800.shp</h2>
+<p><img alt="" src="http://localhost:5500/images/cabeca2.png" /></p>
+<p>Topography data from Cabeca de Boi mountain, Minas Gerais, Brazil, with 800x800m of resolution.</p>
+<ul>
+<li><strong>Files:</strong> <a href="http://localhost:5500/data/cabecadeboi800.dbf">cabecadeboi800.dbf</a>, <a href="http://localhost:5500/data/cabecadeboi800.prj">cabecadeboi800.prj</a>, <a href="http://localhost:5500/data/cabecadeboi800.shp">cabecadeboi800.shp</a>, <a href="http://localhost:5500/data/cabecadeboi800.shx">cabecadeboi800.shx</a></li>
+<li><strong>Representation:</strong> polygon</li>
+<li><strong>Quantity:</strong> 144</li>
+<li><strong>Projection:</strong> <a href="https://epsg.io/4269">'NAD83', with EPSG: 4269 (PROJ4: '+proj=longlat +datum=NAD83 +no_defs')</a></li>
+<li><strong>Source:</strong> This data is a copy of cabecadeboi created by terralib package, using a resolution of 800m.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col</td>
+<td>number</td>
+<td>Cell's column.</td>
+</tr>
+<tr>
+<td>height</td>
+<td>number</td>
+<td>Height of the Cell, measured in values between 0 and 255.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Unique identifier (internal value).</td>
+</tr>
+<tr>
+<td>row</td>
+<td>number</td>
+<td>Cell's row.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="emasshp">emas.shp</h2>
+<p><img alt="" src="http://localhost:5500/images/emas.png" /></p>
+<p>Cellular data representing Emas National Park, Brazil. It has 500x500m of resolution.</p>
+<ul>
+<li><strong>Files:</strong> <a href="http://localhost:5500/data/emas.dbf">emas.dbf</a>, <a href="http://localhost:5500/data/emas.prj">emas.prj</a>, <a href="http://localhost:5500/data/emas.shp">emas.shp</a>, <a href="http://localhost:5500/data/emas.shx">emas.shx</a></li>
+<li><strong>Representation:</strong> polygon</li>
+<li><strong>Quantity:</strong> 5514</li>
+<li><strong>Projection:</strong> 'USER:900915', with EPSG: 900915 (PROJ4: '+proj=utm +zone=22 +south +ellps=aust_SA +units=m +no_defs')</li>
+<li><strong>Source:</strong> This data is a copy of the file with the same name created by terralib package.</li>
+<li><strong>Reference:</strong> Almeida, Rodolfo M., et al. 'Simulando padroes de incendios no Parque Nacional das Emas, Estado de Goias, Brasil.' X Simposio Brasileiro de Geoinformatica (2008)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col</td>
+<td>number</td>
+<td>Cell's column.</td>
+</tr>
+<tr>
+<td>firebreak</td>
+<td>number</td>
+<td>Cell has a firebreak (1) or not (0).</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Unique identifier (internal value).</td>
+</tr>
+<tr>
+<td>maxcover</td>
+<td>number</td>
+<td>A value between 1 and 5 with the maximum value for the forest cover according to the original data with lower resolution.</td>
+</tr>
+<tr>
+<td>mincover</td>
+<td>number</td>
+<td>A value between 1 and 5 with the minimum value for the forest cover according to the original data with lower resolution.</td>
+</tr>
+<tr>
+<td>river</td>
+<td>number</td>
+<td>Cell has a river (1) or not (0).</td>
+</tr>
+<tr>
+<td>row</td>
+<td>number</td>
+<td>Cell's row.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gpmlinesdbemasgpm">gpmlinesDbEmas.gpm</h2>
+<p>Neighborhood files to be used with emas database.</p>
+<ul>
+<li><strong>File:</strong> <a href="http://localhost:5500/data/gpmlinesDbEmas.gpm">gpmlinesDbEmas.gpm</a></li>
+<li><strong>Connected files/layers:</strong> emas.shp and river.shp</li>
+<li><strong>Number of origins:</strong> 1435</li>
+<li><strong>Number of connections:</strong> 623</li>
+<li><strong>Source:</strong> TerraME team</li>
+</ul>
+<hr />
+<h2 id="rivershp">river.shp</h2>
+<p>A line describing a river within Emas National Park, in Goias, Brazil.</p>
+<ul>
+<li><strong>Files:</strong> <a href="http://localhost:5500/data/river.dbf">river.dbf</a>, <a href="http://localhost:5500/data/river.shp">river.shp</a>, <a href="http://localhost:5500/data/river.shx">river.shx</a></li>
+<li><strong>Representation:</strong> line</li>
+<li><strong>Quantity:</strong> 208</li>
+<li><strong>Projection:</strong> Undefined, with EPSG: 0 (PROJ4: Undefined)</li>
+<li><strong>Source:</strong> Rodolfo Almeida</li>
+</ul>
+<hr />
+<h2 id="simplepgm">simple.pgm</h2>
+<p><img alt="" src="http://localhost:5500/images/simple.png" /></p>
+<p>A simple CellularSpace with one attribute for sugarscape model.</p>
+<ul>
+<li><strong>File:</strong> <a href="http://localhost:5500/data/simple.pgm">simple.pgm</a></li>
+<li><strong>Source:</strong> TerraME team</li>
+</ul>
+<hr />
+<h2 id="test">test</h2>
+<p>Directory with files used only for internal tests. This directory is not available within TerraME installer, but it can be downloaded from GitHub.</p>
+<ul>
+<li><strong>Files:</strong> 36</li>
+<li><strong>Extensions:</strong> csv, dbf, gal, gpm, gwt, prj, qix, shp, shx</li>
+<li><strong>Source:</strong> TerraME team</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../examples/" class="btn btn-neutral float-left" title="Examples"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../font/" class="btn btn-neutral float-right" title="Font">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../examples/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../font/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

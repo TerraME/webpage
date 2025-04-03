@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>File - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "File";
+        var mkdocs_page_input_path = "base/types/file.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">File</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">attributes</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#close">close</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#copy">copy</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#delete">delete</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#deleteifexists">deleteIfExists</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#exists">exists</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#extension">extension</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hasextension">hasExtension</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#name">name</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#open">open</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#see-also">See also</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#path">path</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_11">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#read">read</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_12">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#readline">readLine</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_13">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#split">split</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_14">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#touch">touch</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_15">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#write">write</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_7">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_16">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#writeline">writeLine</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_8">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_17">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">..</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_9">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_18">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">File</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="file">File</h1>
+<p>An abstract representation of a file. Whenever an instance of File is created, it only verifies whether it is possible to have a file with the given name and if its directory exists (in case of explicitly specified). It will not stop with an error if the file does not exist. The file is only opened when a read function is called. The file is only created if a write function is called.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>name</strong>: A string with the file name. This argument is mandatory.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>file = File("agents.csv")</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#attributes">attributes</a></td>
+<td>Return a table with the file attributes corresponding to filepath (or nil followed by an error message in case of error).</td>
+</tr>
+<tr>
+<td><a href="./#close">close</a></td>
+<td>Close an opened file.</td>
+</tr>
+<tr>
+<td><a href="./#copy">copy</a></td>
+<td>Copy the file to a given destination.</td>
+</tr>
+<tr>
+<td><a href="./#delete">delete</a></td>
+<td>Remove an existing file.</td>
+</tr>
+<tr>
+<td><a href="./#deleteifexists">deleteIfExists</a></td>
+<td>Remove a file if it exists.</td>
+</tr>
+<tr>
+<td><a href="./#exists">exists</a></td>
+<td>Return whether the file stored in the computer.</td>
+</tr>
+<tr>
+<td><a href="./#extension">extension</a></td>
+<td>Return the extension of the file.</td>
+</tr>
+<tr>
+<td><a href="./#hasextension">hasExtension</a></td>
+<td>Return a boolean value if the file has an extension.</td>
+</tr>
+<tr>
+<td><a href="./#name">name</a></td>
+<td>Return the file name removing its path.</td>
+</tr>
+<tr>
+<td><a href="./#open">open</a></td>
+<td>Open the file for reading or writing.</td>
+</tr>
+<tr>
+<td><a href="./#path">path</a></td>
+<td>Return the path to the file.</td>
+</tr>
+<tr>
+<td><a href="./#read">read</a></td>
+<td>Read a file.</td>
+</tr>
+<tr>
+<td><a href="./#readline">readLine</a></td>
+<td>Read a line from the file.</td>
+</tr>
+<tr>
+<td><a href="./#split">split</a></td>
+<td>Split the path, name, and extension of the file into three returning values.</td>
+</tr>
+<tr>
+<td><a href="./#touch">touch</a></td>
+<td>Set access and modification times for the file.</td>
+</tr>
+<tr>
+<td><a href="./#write">write</a></td>
+<td>Write a given <a href="../dataFrame/">DataFrame</a> into the file.</td>
+</tr>
+<tr>
+<td><a href="./#writeLine">writeLine</a></td>
+<td>Write a given string or table into the file.</td>
+</tr>
+<tr>
+<td><a href="./#..">..</a></td>
+<td>Concatenate the file.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="attributes"><strong>attributes</strong></h2>
+<p>Return a table with the file attributes corresponding to filepath (or nil followed by an error message in case of error). The attributes are described as follows; attribute mode is a string, all the others are numbers, and the time related attributes use the same time reference of os.time. This function uses stat internally thus if the given filepath is a symbolic link, it is followed (if it points to another link the chain is followed recursively) and the information is about the file it refers to.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the name of the attribute to be read.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"dev"</td>
+<td>on Unix systems, this represents the device that the inode resides on. On Windows systems, represents the drive number of the disk containing the file</td>
+</tr>
+<tr>
+<td>"ino"</td>
+<td>on Unix systems, this represents the inode number. On Windows systems this has no meaning</td>
+</tr>
+<tr>
+<td>"mode"</td>
+<td>string representing the associated protection mode (the values could be file, directory, link, socket, named pipe, char device, block device or other)</td>
+</tr>
+<tr>
+<td>"nlink"</td>
+<td>number of hard links to the file</td>
+</tr>
+<tr>
+<td>"uid"</td>
+<td>user-id of owner (Unix only, always 0 on Windows)</td>
+</tr>
+<tr>
+<td>"gid"</td>
+<td>group-id of owner (Unix only, always 0 on Windows)</td>
+</tr>
+<tr>
+<td>"rdev"</td>
+<td>on Unix systems, represents the device type, for special file inodes. On Windows systems represents the same as dev</td>
+</tr>
+<tr>
+<td>"access"</td>
+<td>time of last access</td>
+</tr>
+<tr>
+<td>"modification"</td>
+<td>time of last data modification</td>
+</tr>
+<tr>
+<td>"change"</td>
+<td>time of last file status change</td>
+</tr>
+<tr>
+<td>"size"</td>
+<td>file size, in bytes</td>
+</tr>
+<tr>
+<td>"blocks"</td>
+<td>block allocated for file; (Unix only)</td>
+</tr>
+<tr>
+<td>"blksize"</td>
+<td>optimal file system I/O blocksize; (Unix only)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>filePath("river.shp"):attributes("mode")</code></pre>
+<hr />
+<h2 id="close"><strong>close</strong></h2>
+<p>Close an opened file.  </p>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>file = File("abc.txt")
+file:close()</code></pre>
+<hr />
+<h2 id="copy"><strong>copy</strong></h2>
+<p>Copy the file to a given destination.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A <a href="../directory/">Directory</a> or a string with the destination path. It can also be a File with the destination. If the file to be copied is a shapefile, it also copies the respective dbf, shx, prj, and qix files if they exist.</li>
+</ul>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>path = Directory("c:/mypath")
+file = File(path.."file.lua")
+file:copy(File(path.."file2.lua")) -- from c:/mypath/file.lua to c:/mypath/file2.lua</code></pre>
+<hr />
+<h2 id="delete"><strong>delete</strong></h2>
+<p>Remove an existing file. If the file does not exist or it cannot be removed, this function stops with an error. If the file to be removed is a shapefile, it also removes the respective dbf, shx, prj, and qix files if they exist.  </p>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>filename = "myfile.txt"
+file = File(filename)
+file:writeLine("Some text..")
+file:close()
+file:delete()</code></pre>
+<hr />
+<h2 id="deleteifexists"><strong>deleteIfExists</strong></h2>
+<p>Remove a file if it exists. It does not stop with an error when the file does not exist. This function returns the File itself.  </p>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>filename = "myfile.txt"
+file = File(filename)
+file:writeLine("Some text..")
+file:close()
+file:deleteIfExists()
+
+file = File(filename):deleteIfExists() -- ensure that "myfile.txt" does not exist when 'file' is created</code></pre>
+<hr />
+<h2 id="exists"><strong>exists</strong></h2>
+<p>Return whether the file stored in the computer.  </p>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:exists())</code></pre>
+<hr />
+<h2 id="extension"><strong>extension</strong></h2>
+<p>Return the extension of the file. It returns the substring after the last dot. If it does not have a dot, an empty string is returned.  </p>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:extension()) -- "csv"</code></pre>
+<hr />
+<h2 id="hasextension"><strong>hasExtension</strong></h2>
+<p>Return a boolean value if the file has an extension.  </p>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:hasExtension()) -- true</code></pre>
+<hr />
+<h2 id="name"><strong>name</strong></h2>
+<p>Return the file name removing its path.  </p>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:name()) -- "agents.csv"</code></pre>
+<hr />
+<h2 id="open"><strong>open</strong></h2>
+<p>Open the file for reading or writing. An opened file must be closed after being used.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the mode. It can be "w" for writing or "r" for reading.</li>
+</ul>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>file = File("myfile.txt")
+file:open()</code></pre>
+<h3 id="see-also">See also</h3>
+<ul>
+<li><a href="./#close">close</a></li>
+</ul>
+<hr />
+<h2 id="path"><strong>path</strong></h2>
+<p>Return the path to the file.  </p>
+<h3 id="usage_11">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+print(file:path())</code></pre>
+<hr />
+<h2 id="read"><strong>read</strong></h2>
+<p>Read a file. It returns a vector (whose indexes are line numbers) containing named tables (whose indexes are attribute names). The first line of the file list the attribute names. This function automatically closes the file.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the separator. The default value is ','.</li>
+</ul>
+<h3 id="usage_12">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+csv = file:read()
+print(csv[1].age) -- 20</code></pre>
+<hr />
+<h2 id="readline"><strong>readLine</strong></h2>
+<p>Read a line from the file. It stores the position of the line internally in case of some error occur. Therefore no line number will be used as argument for this function.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string with the separator. Parse a single CSV line. It returns a vector of strings with the i-th value in the position i. This function was taken from <a href="http://lua-users.org/wiki/LuaCsv.">http://lua-users.org/wiki/LuaCsv.</a></li>
+</ul>
+<h3 id="usage_13">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+line = file:readLine(",")
+print(line[1]) -- john
+print(line[2]) -- 20
+print(line[3]) -- 200
+
+line = file:readLine()
+print(line) -- "mary",18,100,3,1,false</code></pre>
+<hr />
+<h2 id="split"><strong>split</strong></h2>
+<p>Split the path, name, and extension of the file into three returning values.  </p>
+<h3 id="usage_14">Usage</h3>
+<pre class="highlight"><code>file = filePath("agents.csv", "base")
+directory, name, extension = file:split()
+print(directory) -- "/base/data/"
+print(name) -- "agents",
+print(extension) -- "csv"</code></pre>
+<hr />
+<h2 id="touch"><strong>touch</strong></h2>
+<p>Set access and modification times for the file. Times are provided in seconds (which should be generated with Lua standard function os.time). If the modification time is omitted, the access time provided is used; if both times are omitted, the current time is used. Returns true if the operation was successful; in case of error, it returns nil plus an error string.  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The new access time (in seconds).</li>
+<li><strong>#2</strong>: The new modification time (in seconds).</li>
+</ul>
+<h3 id="usage_15">Usage</h3>
+<pre class="highlight"><code>filePath("river.shp"):touch(0, 0)</code></pre>
+<hr />
+<h2 id="write"><strong>write</strong></h2>
+<p>Write a given <a href="../dataFrame/">DataFrame</a> into the file. It automatically closes the file after writing it.  </p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A DataFrame.</li>
+<li><strong>#2</strong>: A string with the separator. The default value is ','.</li>
+</ul>
+<h3 id="usage_16">Usage</h3>
+<pre class="highlight"><code>mytable = DataFrame{
+    {age = 1, wealth = 10, vision = 2},
+    {age = 3, wealth =  8, vision = 1},
+    {age = 3, wealth = 15, vision = 2}
+}
+
+file = File("file.csv")
+file:write(mytable, ";")
+file:deleteIfExists()</code></pre>
+<hr />
+<h2 id="writeline"><strong>writeLine</strong></h2>
+<p>Write a given string or table into the file. The file must be closed afterwards. It automatically adds an end of line to the file after the string.  </p>
+<h3 id="arguments_8">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string or table to be saved. A table it must be a vector with the values to be saved in a given line.</li>
+<li><strong>#2</strong>: A string with the separator. The default value is ','.</li>
+</ul>
+<h3 id="usage_17">Usage</h3>
+<pre class="highlight"><code>mytable = {"x", "y", "z"}
+
+file = File("file.csv")
+file:writeLine(mytable, ";")
+file:writeLine("Some text..")
+file:close()
+file:deleteIfExists()</code></pre>
+<hr />
+<h2 id="_1"><strong>..</strong></h2>
+<p>Concatenate the file.  </p>
+<h3 id="arguments_9">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string or an object that can be concatenated.</li>
+</ul>
+<h3 id="usage_18">Usage</h3>
+<pre class="highlight"><code>print(File("abcd1234").." does not exist.")</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../event/" class="btn btn-neutral float-left" title="Event"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../flow/" class="btn btn-neutral float-right" title="Flow">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../event/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../flow/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Automaton - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Automaton";
+        var mkdocs_page_input_path = "base/types/automaton.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Automaton</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add">add</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#execute">execute</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getid">getId</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getstate">getState</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getstatename">getStateName</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_4">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getstates">getStates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#notify">notify</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_5">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setid">setId</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_6">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settrajectorystatus">setTrajectoryStatus</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_7">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Automaton</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="automaton">Automaton</h1>
+<p>A hybrid state machine that needs to be located on a <a href="../cellularSpace/">CellularSpace</a>, and is replicated over each <a href="../cell/">Cell</a> of the space. It has independent <a href="../state/">States</a> in each Cell.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>id</strong>: A string that names the Automanton.</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<p>Some attributes of Automaton have internal semantics. They can be used as <strong>read-only</strong> by the modeler.</p>
+<ul>
+<li><strong>parent</strong>: The <a href="../environment/">Environment</a> it belongs.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>automaton = Automaton {
+    id = "MyAutomaton",
+    State {...},
+    -- ...
+    State {...}
+}</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#add">add</a></td>
+<td>Add a new <a href="../trajectory/">Trajectory</a> or <a href="../state/">State</a> to the Automaton.</td>
+</tr>
+<tr>
+<td><a href="./#execute">execute</a></td>
+<td>Execute the <a href="../state/">State</a> machine.</td>
+</tr>
+<tr>
+<td><a href="./#getid">getId</a></td>
+<td>Return the unique identifier name of the Automaton.</td>
+</tr>
+<tr>
+<td><a href="./#getstate">getState</a></td>
+<td>Get a <a href="../state/">State</a> of the Automaton according to a given position.</td>
+</tr>
+<tr>
+<td><a href="./#getstatename">getStateName</a></td>
+<td>Return the name of the current <a href="../state/">State</a>.</td>
+</tr>
+<tr>
+<td><a href="./#getstates">getStates</a></td>
+<td>Get all the <a href="../state/">States</a> inside the Automaton.</td>
+</tr>
+<tr>
+<td><a href="./#notify">notify</a></td>
+<td>Notify every Observer connected to the Automaton.</td>
+</tr>
+<tr>
+<td><a href="./#setid">setId</a></td>
+<td>Set the unique identifier of the Automaton.</td>
+</tr>
+<tr>
+<td><a href="./#settrajectorystatus">setTrajectoryStatus</a></td>
+<td>Activate or not the <a href="../trajectory/">Trajectories</a> defined for the Automaton.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add"><strong>add</strong></h2>
+<p>Add a new <a href="../trajectory/">Trajectory</a> or <a href="../state/">State</a> to the Automaton. It returns a boolean value indicating whether the new element was successfully added.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Trajectory or State.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>automaton:add(state)
+automaton:add(trajectory)</code></pre>
+<hr />
+<h2 id="execute"><strong>execute</strong></h2>
+<p>Execute the <a href="../state/">State</a> machine. First, it executes the <a href="../jump/">Jump</a> of the current State while it jumps from State to State. When the machine stops jumping, it executes all the <a href="../flow/">Flows</a> of the current State. Usually, this function is called within an <a href="../event/">Event</a>, thus the time of the Event can be got from the <a href="../timer/">Timer</a>. It returns a boolean value indicating whether the Jumps were executed correctly.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: An Event.</li>
+</ul>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>automaton:execute(event)</code></pre>
+<hr />
+<h2 id="getid"><strong>getId</strong></h2>
+<p>Return the unique identifier name of the Automaton.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>automaton:getId()</code></pre>
+<hr />
+<h2 id="getstate"><strong>getState</strong></h2>
+<p>Get a <a href="../state/">State</a> of the Automaton according to a given position.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A number indicating the position of the State to be retrieved.</li>
+</ul>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>state = automaton:getState(1)</code></pre>
+<hr />
+<h2 id="getstatename"><strong>getStateName</strong></h2>
+<p>Return the name of the current <a href="../state/">State</a>. As an Automaton has independent States in each <a href="../cell/">Cell</a>, it requires a location to return its State name.  </p>
+<h3 id="arguments_4">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Cell.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>id = automaton:getStateName(cell)</code></pre>
+<hr />
+<h2 id="getstates"><strong>getStates</strong></h2>
+<p>Get all the <a href="../state/">States</a> inside the Automaton. It returns a vector.  </p>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>state = automaton:getStates()[1]</code></pre>
+<hr />
+<h2 id="notify"><strong>notify</strong></h2>
+<p>Notify every Observer connected to the Automaton.  </p>
+<h3 id="arguments_5">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: An integer number representing the notification time. The default value is zero. It is also possible to use an <a href="../event/">Event</a> as argument. In this case, it will use the result of <a href="../event/#gettime">Event:getTime()</a>.</li>
+</ul>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>automaton:notify()</code></pre>
+<hr />
+<h2 id="setid"><strong>setId</strong></h2>
+<p>Set the unique identifier of the Automaton. Return a boolean value indicating whether the id was changed correctly.  </p>
+<h3 id="arguments_6">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A string that names the Automaton.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>automaton:setId("newid")</code></pre>
+<hr />
+<h2 id="settrajectorystatus"><strong>setTrajectoryStatus</strong></h2>
+<p>Activate or not the <a href="../trajectory/">Trajectories</a> defined for the Automaton. Returns whether the change was successfully executed. When the Automaton is built its status is not activated.  </p>
+<h3 id="arguments_7">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A boolean that indicates if the Trajectories will be activated.</li>
+</ul>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>automaton:setTrajectoryStatus(true)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../agent/" class="btn btn-neutral float-left" title="Agent"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../cell/" class="btn btn-neutral float-right" title="Cell">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../agent/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../cell/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

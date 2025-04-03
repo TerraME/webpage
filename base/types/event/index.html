@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Event - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Event";
+        var mkdocs_page_input_path = "base/types/event.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Event</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#config">config</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getparent">getParent</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getperiod">getPeriod</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getpriority">getPriority</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gettime">getTime</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../trajectory/">Trajectory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Event</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="event">Event</h1>
+<p>An Event represents a time instant when the simulation engine must execute some computation. In order to be executed, Events must belong to a <a href="../timer/">Timer</a>. An Event is usually rescheduled to be executed again according to its period, unless its action explicitly returns false.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>action</strong>: A function that will be executed when the Event is activated. It has one single argument, the Event itself. If the action returns false, the Event is removed from the Timer and will not be executed again. When the action will execute a single function of a TerraME object, it is possible to use <a href="../../functions/utils/#call">call()</a>. Action can also be a TerraME object. In this case, each type has its own set of functions that will be activated by the Event. See below how the objects are activated. Arrows indicate the execution order:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Object</th>
+<th>Function(s) activated by the Event</th>
+<th>Default priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../agent/">Agent</a>/<a href="../automaton/">Automaton</a></td>
+<td>execute</td>
+<td>0 ("medium")</td>
+</tr>
+<tr>
+<td><a href="../cellularSpace/">CellularSpace</a>/<a href="../cell/">Cell</a></td>
+<td>synchronize and then execute (if exists)</td>
+<td>-5 ("high")</td>
+</tr>
+<tr>
+<td><a href="../chart/">Chart</a>/<a href="../map/">Map</a>/<a href="../clock/">Clock</a>/<a href="../log/">Log</a>/<a href="../internetSender/">InternetSender</a>/<a href="../visualTable/">VisualTable</a>/<a href="../textScreen/">TextScreen</a></td>
+<td>update</td>
+<td>10 ("verylow")</td>
+</tr>
+<tr>
+<td>function</td>
+<td>the function itself</td>
+<td>0 ("medium")</td>
+</tr>
+<tr>
+<td><a href="../model/">Model</a></td>
+<td>execute (if exists)</td>
+<td>0 ("medium")</td>
+</tr>
+<tr>
+<td><a href="../society/">Society</a></td>
+<td>synchronize and then execute (if exists)</td>
+<td>0 ("medium")</td>
+</tr>
+<tr>
+<td><a href="../trajectory/">Trajectory</a>/<a href="../group/">Group</a></td>
+<td>rebuild and then execute (if exists)</td>
+<td>0 ("medium")</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>period</strong>: A positive number representing the periodicity of the Event. The default value is 1. If it is zero or false, the Event will execute only once and then it will be removed from its Timer.</li>
+<li><strong>priority</strong>: A number with the priority of the Event over other Events. Smaller values have higher priority. The default value depends on the type of its action. Priorities can also be defined as strings:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Priority</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"verylow"</td>
+<td>10</td>
+</tr>
+<tr>
+<td>"low"</td>
+<td>5</td>
+</tr>
+<tr>
+<td>"medium"</td>
+<td>0</td>
+</tr>
+<tr>
+<td>"high"</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>"veryhigh"</td>
+<td>-10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>start</strong>: A number representing the time instant when the Event will occur for the first time. The default value is one, except when using graphics (Chart, Map, Clock, etc.) as action. In this case the default value is zero, plotting the initial state of the simulation.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+    print(event:getTime())
+end}
+
+agent = Agent{
+    execute = function()
+        print("executing")
+    end
+}
+
+event2 = Event{
+    start = 2000,
+    action = agent
+}
+
+timer = Timer{event, event2}
+timer:run(10)</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#config">config</a></td>
+<td>Change the attributes of the Event.</td>
+</tr>
+<tr>
+<td><a href="./#getparent">getParent</a></td>
+<td>Return the <a href="../timer/">Timer</a> that contains the Event.</td>
+</tr>
+<tr>
+<td><a href="./#getperiod">getPeriod</a></td>
+<td>Return the period of the Event.</td>
+</tr>
+<tr>
+<td><a href="./#getpriority">getPriority</a></td>
+<td>Return the priority of the Event.</td>
+</tr>
+<tr>
+<td><a href="./#gettime">getTime</a></td>
+<td>Return the current simulation time, according to the <a href="../timer/">Timer</a> it belongs.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="config"><strong>config</strong></h2>
+<p>Change the attributes of the Event. It will be rescheduled according to its new attributes if this function is called while the action is being executed. Be careful when using this function outside the events's action, because the scheduler will not update its queue. In this case, it is recommended to replace the Event by another one.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>period</strong>: The new periodicity of the Event.</li>
+<li><strong>priority</strong>: The new priority of the Event.</li>
+<li><strong>time</strong>: The time instant the Event will occur.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>event = Event{start = 2, action = function() end}
+
+event:config{priority = -1}
+event:config{time = 10, period = 2}</code></pre>
+<hr />
+<h2 id="getparent"><strong>getParent</strong></h2>
+<p>Return the <a href="../timer/">Timer</a> that contains the Event.  </p>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>event = Event {action = function(event)
+    print(event:getTime())
+end}
+
+timer = Timer{event}
+
+parent = event:getParent()
+if parent == timer then
+    print("equal")
+end</code></pre>
+<hr />
+<h2 id="getperiod"><strong>getPeriod</strong></h2>
+<p>Return the period of the Event.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+    print(event:getTime())
+end}
+
+period = event:getPeriod()
+print(period)</code></pre>
+<hr />
+<h2 id="getpriority"><strong>getPriority</strong></h2>
+<p>Return the priority of the Event.  </p>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+    print(event:getTime())
+end}
+
+priority = event:getPriority()
+print(priority)</code></pre>
+<hr />
+<h2 id="gettime"><strong>getTime</strong></h2>
+<p>Return the current simulation time, according to the <a href="../timer/">Timer</a> it belongs.  </p>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>event = Event {start = 1985, period = 2, priority = -1, action = function(event)
+    print(event:getTime())
+end}
+
+time = event:getTime()
+print(time)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../environment/" class="btn btn-neutral float-left" title="Environment"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../file/" class="btn btn-neutral float-right" title="File">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../environment/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../file/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

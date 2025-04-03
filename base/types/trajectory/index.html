@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Trajectory - TerraME</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Trajectory";
+        var mkdocs_page_input_path = "base/types/trajectory.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../..">
+          <img src="../../../img/terrameee.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">TerraME: Multiparadigm Modeling Toolkit</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Base</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Types</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../agent/">Agent</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../automaton/">Automaton</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cell/">Cell</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../cellularSpace/">CellularSpace</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../chart/">Chart</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../choice/">Choice</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../clock/">Clock</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../dataFrame/">DataFrame</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../directory/">Directory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../environment/">Environment</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../event/">Event</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../file/">File</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../flow/">Flow</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../group/">Group</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../internetSender/">InternetSender</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../jump/">Jump</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../log/">Log</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../mandatory/">Mandatory</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../map/">Map</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../model/">Model</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../neighborhood/">Neighborhood</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../profiler/">Profiler</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../random/">Random</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../socialNetwork/">SocialNetwork</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../society/">Society</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../state/">State</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../textScreen/">TextScreen</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../timer/">Timer</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Trajectory</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#arguments">Arguments</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#attributes">Attributes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#add">add</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_1">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_1">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clear">clear</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_2">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clone">clone</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_3">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filter">filter</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_4">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#get">get</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_2">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_5">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#randomize">randomize</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_6">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#rebuild">rebuild</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_7">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#save">save</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#arguments_3">Arguments</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_8">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sort">sort</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_9">Usage</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#_1">#</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#usage_10">Usage</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../unitTest/">UnitTest</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../visualTable/">VisualTable</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Functions</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/errorHandling/">ErrorHandling</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/os/">Os</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/package/">Package</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../functions/utils/">Utils</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../examples/">Examples</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../data/">Data</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../font/">Font</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Package</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../package/package-list/">Package-list</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">TerraME</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Base</li>
+          <li class="breadcrumb-item">Types</li>
+      <li class="breadcrumb-item active">Trajectory</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="trajectory-inherits-cellularspace">Trajectory (inherits <a href="../cellularSpace/">CellularSpace</a>)</h1>
+<p>Type that defines an ordered selection over a <a href="../cellularSpace/">CellularSpace</a>. It inherits CellularSpace; therefore it is possible to apply all functions of such type to a Trajectory. For instance, calling <a href="../../functions/utils/#foreachcell">forEachCell()</a> also traverses Trajectories.  </p>
+<h3 id="arguments">Arguments</h3>
+<ul>
+<li><strong>build</strong>: A boolean value indicating whether the Trajectory should be computed when created. The default value is true.</li>
+<li><strong>greater</strong>: A function (<a href="../cell/">Cell</a>, Cell)-&gt;boolean to sort the Trajectory. Such function must return true if the first Cell has priority over the second one. When using this argument, Trajectory compares each pair of Cells to establish an execution order to be used by <a href="../../functions/utils/#foreachcell">forEachCell()</a>. As default, the Trajectory will not be ordered and so <a href="../../functions/utils/#foreachcell">forEachCell()</a> will run in the order the Cells were pushed into the CellularSpace. See <a href="../../functions/utils/#greaterbyattribute">greaterByAttribute()</a> for predefined options for this argument.</li>
+<li><strong>random</strong>: A boolean value indicating that the Trajectory must be shuffled. The Trajectory will be shuffled every time one calls <a href="./#rebuild">rebuild()</a> or when the Trajectory is an action of an <a href="../event/">Event</a>. This argument cannot be combined with argument greater.</li>
+<li><strong>select</strong>: A function (Cell)-&gt;boolean indicating whether an Cell of the CellularSpace should belong to the Trajectory. If this function returns anything but false or nil for a given Cell, it will be added to the Trajectory. If this argument is missing, all Cells will be included in the Trajectory.</li>
+<li><strong>target</strong>: The CellularSpace over which the Trajectory will take place.</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<p>Some attributes of Trajectory have internal semantics. They can be used as <strong>read-only</strong> by the modeler.</p>
+<ul>
+<li><strong>cells</strong>: A vector of Cells pointed by the Trajectory.</li>
+<li><strong>cObj_</strong>: A pointer to a C++ representation of the Trajectory. Never use this object.</li>
+<li><strong>greater</strong>: The last function used to sort the Trajectory.</li>
+<li><strong>parent</strong>: The CellularSpace where the Trajectory takes place.</li>
+<li><strong>select</strong>: The last function used to filter the Trajectory.</li>
+</ul>
+<h3 id="usage">Usage</h3>
+<pre class="highlight"><code>cell = Cell{
+    cover = Random{"forest", "deforested"},
+    dist = Random{min = 0, max = 50}
+}
+
+cs = CellularSpace{
+    xdim = 10,
+    instance = cell
+}
+
+traj = Trajectory{
+    target = cs,
+    select = function(c)
+        return c.cover == "forest"
+    end,
+    greater = function(c, d)
+        return c.dist &lt; d.dist
+    end
+}
+
+traj = Trajectory{
+    target = cs,
+    greater = function(c, d)
+        return c.dist &lt; d.dist
+    end
+}
+
+traj = Trajectory{
+    target = cs,
+    build = false
+}</code></pre>
+<hr />
+<h2 id="functions">Functions</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./#add">add</a></td>
+<td>Add a new <a href="../cell/">Cell</a> to the Trajectory.</td>
+</tr>
+<tr>
+<td><a href="./#clear">clear</a></td>
+<td>Remove all <a href="../cell/">Cells</a> from the Trajectory.</td>
+</tr>
+<tr>
+<td><a href="./#clone">clone</a></td>
+<td>Return a copy of the Trajectory.</td>
+</tr>
+<tr>
+<td><a href="./#filter">filter</a></td>
+<td>Apply the filter over the <a href="../cell/">Cells</a> of the Trajectory.</td>
+</tr>
+<tr>
+<td><a href="./#get">get</a></td>
+<td>Return a <a href="../cell/">Cell</a> from the Trajectory given its x and y locations.</td>
+</tr>
+<tr>
+<td><a href="./#randomize">randomize</a></td>
+<td>Randomize the <a href="../cell/">Cells</a> of the Trajectory.</td>
+</tr>
+<tr>
+<td><a href="./#rebuild">rebuild</a></td>
+<td>Rebuild the Trajectory.</td>
+</tr>
+<tr>
+<td><a href="./#save">save</a></td>
+<td>Save a subset from the target <a href="../cellularSpace/">CellularSpace</a> into a file.</td>
+</tr>
+<tr>
+<td><a href="./#sort">sort</a></td>
+<td>Sort the current <a href="../cellularSpace/">CellularSpace</a> subset.</td>
+</tr>
+<tr>
+<td><a href="./##">#</a></td>
+<td>Retrieve the number of <a href="../cell/">Cells</a> in the Trajectory.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="add"><strong>add</strong></h2>
+<p>Add a new <a href="../cell/">Cell</a> to the Trajectory. It will be added to the end of the list of Cells.  </p>
+<h3 id="arguments_1">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A Cell.</li>
+</ul>
+<h3 id="usage_1">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    xdim = 10
+}
+
+traj = Trajectory{
+    target = cs,
+    select = function(c)
+        return c.x &gt; 3
+    end
+}
+
+traj:add(cs:get(1, 1))</code></pre>
+<hr />
+<h2 id="clear"><strong>clear</strong></h2>
+<p>Remove all <a href="../cell/">Cells</a> from the Trajectory.  </p>
+<h3 id="usage_2">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    xdim = 10
+}
+
+traj = Trajectory{
+    target = cs
+}
+
+traj:clear()
+
+print(#traj)</code></pre>
+<hr />
+<h2 id="clone"><strong>clone</strong></h2>
+<p>Return a copy of the Trajectory. It has the same parent, select, greater and <a href="../cell/">Cells</a>. Any change in the cloned Trajectory will not affect the original one.  </p>
+<h3 id="usage_3">Usage</h3>
+<pre class="highlight"><code>cell = Cell{
+    cover = Random{"forest", "deforested"}
+}
+
+cs = CellularSpace{
+    xdim = 10,
+    instance = cell
+}
+
+traj = Trajectory{
+    target = cs,
+    select = function(c)
+        return c.cover == "forest"
+    end
+}
+
+copy = traj:clone()
+print(#copy)
+print(#traj)</code></pre>
+<hr />
+<h2 id="filter"><strong>filter</strong></h2>
+<p>Apply the filter over the <a href="../cell/">Cells</a> of the Trajectory. Cells that belong to the <a href="../cellularSpace/">CellularSpace</a> but do not belong to the Trajectory are ignored. This way, this function creates a subset over the subset of the CellularSpace.  </p>
+<h3 id="usage_4">Usage</h3>
+<pre class="highlight"><code>cell = Cell{
+    dist = Random{min = 0, max = 50},
+    increase = function(self)
+        self.dist = self.dist + 2
+    end
+}
+
+cs = CellularSpace{
+    xdim = 10,
+    instance = cell
+}
+
+traj = Trajectory{target = cs, select = function(c)
+    return c.dist &gt; 20
+end}
+
+traj:increase()
+traj:filter()</code></pre>
+<hr />
+<h2 id="get"><strong>get</strong></h2>
+<p>Return a <a href="../cell/">Cell</a> from the Trajectory given its x and y locations. If the Cell does not belong to the Trajectory then it will return nil.  </p>
+<h3 id="arguments_2">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: The x location.</li>
+<li><strong>#2</strong>: The y location.</li>
+</ul>
+<h3 id="usage_5">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
+
+traj = Trajectory{target = cs}
+
+traj:get(1, 1)</code></pre>
+<hr />
+<h2 id="randomize"><strong>randomize</strong></h2>
+<p>Randomize the <a href="../cell/">Cells</a> of the Trajectory. It will change the traversing order used by <a href="../../functions/utils/#foreachcell">forEachCell()</a>.  </p>
+<h3 id="usage_6">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{xdim = 10}
+
+traj = Trajectory{target = cs}
+
+traj:randomize()</code></pre>
+<hr />
+<h2 id="rebuild"><strong>rebuild</strong></h2>
+<p>Rebuild the Trajectory. It works as if the Trajectory was declared again with the same arguments.  </p>
+<h3 id="usage_7">Usage</h3>
+<pre class="highlight"><code>cell = Cell{
+    dist = Random{min = 0, max = 50}
+}
+
+cs = CellularSpace{
+    xdim = 10,
+    instance = cell
+}
+
+traj = Trajectory{
+    target = cs,
+    select = function(cell) return cell.dist &lt; 20 end,
+    greater = function(c1, c2) return c1.dist &lt; c2.dist end
+}
+
+print(#traj)
+forEachCell(cs, function(cell)
+    cell.dist = cell.dist + 10
+end)
+
+traj:rebuild()
+print(#traj)</code></pre>
+<hr />
+<h2 id="save"><strong>save</strong></h2>
+<p>Save a subset from the target <a href="../cellularSpace/">CellularSpace</a> into a file.  </p>
+<h3 id="arguments_3">Arguments</h3>
+<ul>
+<li><strong>#1</strong>: A <a href="../file/">File</a> which can be a .shp or .geojson extension.</li>
+<li><strong>#2</strong>: A vector with the names of the attributes to be saved. If attrs is nil, all attributes will be saved.</li>
+</ul>
+<h3 id="usage_8">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    file = filePath("test/sampa.shp", "gis")
+}
+
+t = Trajectory{
+    target = cs,
+    select = function(cell)
+        return cell.ID % 2 == 0
+    end
+}
+
+t:save("odd.shp")</code></pre>
+<hr />
+<h2 id="sort"><strong>sort</strong></h2>
+<p>Sort the current <a href="../cellularSpace/">CellularSpace</a> subset. It updates the traversing order of the Trajectory.  </p>
+<h3 id="usage_9">Usage</h3>
+<pre class="highlight"><code>cell = Cell{
+    dist = Random{min = 0, max = 50},
+    increase = function(self)
+        self.dist = self.dist + Random{min = 0, max = 3}:sample()
+    end
+}
+
+cs = CellularSpace{
+    xdim = 10,
+    instance = cell
+}
+
+traj = Trajectory{target = cs, greater = function(c, d)
+    return c.dist &lt; d.dist
+end}
+
+traj:increase()
+traj:sort()</code></pre>
+<hr />
+<h2 id="_1"><strong>#</strong></h2>
+<p>Retrieve the number of <a href="../cell/">Cells</a> in the Trajectory.  </p>
+<h3 id="usage_10">Usage</h3>
+<pre class="highlight"><code>cs = CellularSpace{
+    xdim = 10
+}
+
+traj = Trajectory{
+    target = cs
+}
+
+print(#traj)</code></pre>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../timer/" class="btn btn-neutral float-left" title="Timer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../unitTest/" class="btn btn-neutral float-right" title="UnitTest">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2024 TerraME</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../timer/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../unitTest/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
