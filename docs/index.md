@@ -78,7 +78,8 @@ Frequently asked questions are answered [here](https://github.com/TerraME/terram
 ## Papers and reports
 
 ---
-
+- LEMOS, CASSIA M.G.; ANDRADE, PEDRO R. ; RODRIGUES, RICARDO R. ; HISSA, LETICIA ; AGUIAR, ANA P. D. . [Combining regional to local restoration goals in the Brazilian Atlantic forest](https://link.springer.com/article/10.1007/s10113-021-01792-0). Regional Environmental Change, v. 21, p. 68, 2021.
+- Cássia Maria Gama Lemos; Líliam César de Castro Medeiros ; Kelly Ribeiro ; Rodrigo Avancini . [Agent-based model implemented using the TerraME framework to simulate the dynamic transmission of dengue fever](https://periodicos.ufmg.br/index.php/geografias/article/view/13459). Revista GEOgrafias, p. 85-98, 2017.
 - Bezerra et al. [New land-use change scenarios for Brazil: Refining global SSPs with a regional spatially-explicit allocation model](https://doi.org/10.1371/journal.pone.0256052). Plos one 17.4, 2022: e0256052.
 - Aguiar et al. [Land use change emission scenarios: anticipating a forest transition process in the Brazilian Amazon](https://doi.org/10.1111/gcb.13134). Global change biology, v. 22, n. 5, p. 1821-1840, 2016.
 - Aguiar et al. [Modeling the spatial and temporal heterogeneity of deforestation‐driven carbon emissions: the INPE‐EM framework applied to the Brazilian Amazon](https://doi.org/10.1111/j.1365-2486.2012.02782.x). Global Change Biology, v. 18, n. 11, p. 3346-3366, 2012.

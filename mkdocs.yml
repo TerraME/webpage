@@ -12,7 +12,6 @@ theme:
   extra_css: css/extra.css
 
 
-
 nav:
   - 'index.md'
   - Base: 
