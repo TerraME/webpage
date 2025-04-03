@@ -13,7 +13,8 @@ theme:
 
 
 nav:
-  - 'index.md'
+  - TerraME: 
+    - 'index.md'
   - Base: 
     - Index: 'base/index.md'
     - Types:
