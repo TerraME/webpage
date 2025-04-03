@@ -56,8 +56,8 @@ nav:
     - Examples: 'base/examples.md'
     - Data: 'base/data.md'
     - Font: 'base/font.md'
-  - Package:
-    - Package-list: 'package/package-list.md'
+  # - Package:
+  #   - Package-list: 'package/package-list.md'
 
 markdown_extensions:
 
