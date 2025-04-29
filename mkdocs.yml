@@ -9,7 +9,8 @@ theme:
   logo: img/terrameee.png
   site_favicon: img/favicon.ico
   highlightjs: true
-  extra_css: css/extra.css
+  extra_css: 
+    - css/extra.css
 
 
 nav:
@@ -67,6 +68,51 @@ nav:
         - Utils: 'package/gis/functions/utils.md'
         - Examples: 'package/gis/functions/examples.md'
         - Data: 'package/gis/functions/data.md'
+  - ca:
+    - ca: 'package/ca/index.md'
+    - Models: 'package/ca/models.md'
+    - Functions:
+      - LifePatterns: 'package/ca/functions/lifePatterns.md' 
+      - Utils: 'package/ca/functions/utils.md'
+      - Examples: 'package/ca/functions/examples.md'
+      - Data: 'package/ca/functions/data.md'
+  - logo:
+    - logo: 'package/logo/index.md'
+    - Models: 'package/logo/models.md'
+    - Functions:
+      - Utils: 'package/logo/functions/utils.md'
+      - Examples: 'package/logo/functions/examples.md'
+      - Data: 'package/logo/functions/data.md'
+  - sci:
+    - sci: 'package/sci/index.md'
+    - Types:
+      - Spline: 'package/sci/types/spline.md'
+    - Functions:
+      - Feedback: 'package/sci/functions/feedback.md'
+      - Examples: 'package/sci/functions/examples.md'
+  - sysdyn:
+    - sysdyn: 'package/sysdyn/index.md'
+    - Models: 'package/sysdyn/models.md'
+    - Examples: 'package/sysdyn/examples.md'
+  - calibration:
+    - calibration: 'package/calibration/index.md'
+    - Types:
+      - MultipleRuins: 'package/calibration/types/multipleRuins.md'
+      - SAMDE: 'package/calibration/types/samde.md'
+    - Functions:
+      - GoodnessOfFit: 'package/calibration/functions/goodnessOfFit.md'
+      - Utils: 'package/calibration/functions/utils.md'
+      - Examples: 'package/calibration/functions/examples.md'
+      - Data: 'package/calibration/functions/data.md'
+  - gpm:
+    - gpm: 'package/gpm/index.md'
+    - Types:
+      - GPM: 'package/gpm/types/gpm.md'
+      - Network: 'package/gpm/types/network.md'
+      - Example: 'package/gpm/types/examples.md'
+      - Data: 'package/gpm/types/data.md'
+
+      
 
   #   - Package-list: 'package/package-list.md'
 
@@ -87,4 +133,4 @@ markdown_extensions:
 
 
 
-copyright: Copyright &copy; 2024 TerraME
+copyright: Copyright &copy; 2025 TerraME

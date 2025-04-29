@@ -2,7 +2,7 @@
 
 ---
 
-![img](./media/images/topo.png)
+![img](./media/images/topo.png){class="center"}
 
 TerraME is a programming environment for spatial dynamical modelling. It supports cellular automata, agent-based models, and network models running in 2D cell spaces. TerraME provides an interface to TerraLib geographical database, allowing models direct access to geospatial data. Its modelling language has in-built functions that makes it easier to develop multi-scale and multi-paradigm models for environmental applications.
 
@@ -56,13 +56,13 @@ You can execute a Google search in TerraME packages [here](https://cse.google.co
 
 Using the graphical interface, it is possible to download and install packages from TerraME's repository. They are are:
 
-- [**ca**](http://www.terrame.org/packages/doc/ca/doc/index.html): Some cellular automata models.
-- [**logo**](http://www.terrame.org/packages/doc/logo/doc/index.html): Basic spatial agent-based models.
-- [**sci**](http://www.terrame.org/packages/doc/sci/doc/index.html): A small package with interpolation functions.
-- [**sysdyn**](http://www.terrame.org/packages/doc/sysdyn/doc/index.html): Examples using system dynamics models.
-- [**calibration**](http://www.terrame.org/packages/doc/calibration/doc/index.html): Functions to run a given model several times, as well as metrics to compute goodness-of-fit and to calibrate models using genetic algorithms.
+- [**ca**](./package/ca/index.md): Some cellular automata models.
+- [**logo**](./package/logo/index.md): Basic spatial agent-based models.
+- [**sci**](./package/sci/index.md): A small package with interpolation functions.
+- [**sysdyn**](./package/sysdyn/index.md): Examples using system dynamics models.
+- [**calibration**](./package/calibration/index.md): Functions to run a given model several times, as well as metrics to compute goodness-of-fit and to calibrate models using genetic algorithms.
 - [**publish**](http://www.terrame.org/packages/doc/publish/doc/index.html): Create webmap tools using the input as well as output of models.
-- [**gpm**](http://www.terrame.org/packages/doc/gpm/doc/index.html): Create geospatial data as well as neighbourhood files using connectivity networks such as roads.
+- [**gpm**](./package/gpm/index.md): Create geospatial data as well as neighbourhood files using connectivity networks such as roads.
 
 You can run examples directly in the graphical interface of TerraME. Click in the Desktop icon to open it in Windows or run “terrame” in the command line to open the graphical interface. From the graphical interface it is possible to see the documentation of each installed package.
 
