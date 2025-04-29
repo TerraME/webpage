@@ -16,7 +16,11 @@ A package to create neighborhood relations or fill attributes using the idea of 
 |---|---|
 |[GPM](./types/gpm.md)|Type to create a Generalized Proximity Matrix ([GPM](./types/gpm.md)).|
 |[Network](./types/network.md)|Type that represents a network.|
-|## [Examples](./types/examples.md)|   |
+
+## [Examples](./types/examples.md)
+
+|Example|Description|
+|---|---|
 |[**area**](./types/examples.md#area)|[GPM](./types/gpm.md) Implementation strategy 'area' and creating map.|
 |[**border**](./types/examples.md#border)|Compute the neighbors of some Brazilian states.|
 |[**contains**](./types/examples.md#contains)|Example that connects cells to the communities located within them.|
