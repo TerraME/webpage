@@ -111,7 +111,18 @@ nav:
       - Network: 'package/gpm/types/network.md'
       - Example: 'package/gpm/types/examples.md'
       - Data: 'package/gpm/types/data.md'
-
+  - Publish:
+    - Publish: 'package/publish/index.md'
+    - Types:
+      - Application: 'package/publish/types/application.md'
+      - List: 'package/publish/types/list.md'
+      - Report: 'package/publish/types/report.md'
+      - View: 'package/publish/types/view.md'
+    - Functions:
+      - Color: 'package/publish/functions/color.md'
+      - Utils: 'package/publish/functions/utils.md'
+      - Examples: 'package/publish/functions/examples.md'
+      - Data: 'package/publish/functions/data.md'
       
 
   #   - Package-list: 'package/package-list.md'

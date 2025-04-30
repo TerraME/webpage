@@ -19,7 +19,7 @@ A package to create neighborhood relations or fill attributes using the idea of 
 
 ## [Examples](./types/examples.md)
 
-|Example|Description|
+su|Example|Description|
 |---|---|
 |[**area**](./types/examples.md#area)|[GPM](./types/gpm.md) Implementation strategy 'area' and creating map.|
 |[**border**](./types/examples.md#border)|Compute the neighbors of some Brazilian states.|

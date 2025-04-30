@@ -61,7 +61,7 @@ Using the graphical interface, it is possible to download and install packages f
 - [**sci**](./package/sci/index.md): A small package with interpolation functions.
 - [**sysdyn**](./package/sysdyn/index.md): Examples using system dynamics models.
 - [**calibration**](./package/calibration/index.md): Functions to run a given model several times, as well as metrics to compute goodness-of-fit and to calibrate models using genetic algorithms.
-- [**publish**](http://www.terrame.org/packages/doc/publish/doc/index.html): Create webmap tools using the input as well as output of models.
+- [**publish**](./package/publish/index.md): Create webmap tools using the input as well as output of models.
 - [**gpm**](./package/gpm/index.md): Create geospatial data as well as neighbourhood files using connectivity networks such as roads.
 
 You can run examples directly in the graphical interface of TerraME. Click in the Desktop icon to open it in Windows or run “terrame” in the command line to open the graphical interface. From the graphical interface it is possible to see the documentation of each installed package.
