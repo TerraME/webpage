@@ -2,7 +2,7 @@
 
 ---
 
-![img](./media/images/topo.png)
+![img](./media/images/topo.png){class="center"}
 
 TerraME is a programming environment for spatial dynamical modelling. It supports cellular automata, agent-based models, and network models running in 2D cell spaces. TerraME provides an interface to TerraLib geographical database, allowing models direct access to geospatial data. Its modelling language has in-built functions that makes it easier to develop multi-scale and multi-paradigm models for environmental applications.
 
@@ -52,17 +52,17 @@ You can implement models in TerraME using any text file editor of your preferenc
 You can execute a Google search in TerraME packages [here](https://cse.google.com/cse/publicurl?cx=011124210546699273653:pomdzxscb3o). The two basic packages of TerraME that comes with its installation are:
 
 - [**base**](./base/index.md): A package with the basic modelling concepts, such as Cell, CellularSpace, Agent, Timer, and Model.
-- [**gis**](http://www.terrame.org/packages/doc/gis/doc/index.html): A package to handle geospatial data. It has types to manage TerraView projects as well as functions to create and fill cellular layers.
+- [**gis**](./package/gis/index.md): A package to handle geospatial data. It has types to manage TerraView projects as well as functions to create and fill cellular layers.
 
 Using the graphical interface, it is possible to download and install packages from TerraME's repository. They are are:
 
-- [**ca**](http://www.terrame.org/packages/doc/ca/doc/index.html): Some cellular automata models.
-- [**logo**](http://www.terrame.org/packages/doc/logo/doc/index.html): Basic spatial agent-based models.
-- [**sci**](http://www.terrame.org/packages/doc/sci/doc/index.html): A small package with interpolation functions.
-- [**sysdyn**](http://www.terrame.org/packages/doc/sysdyn/doc/index.html): Examples using system dynamics models.
-- [**calibration**](http://www.terrame.org/packages/doc/calibration/doc/index.html): Functions to run a given model several times, as well as metrics to compute goodness-of-fit and to calibrate models using genetic algorithms.
-- [**publish**](http://www.terrame.org/packages/doc/publish/doc/index.html): Create webmap tools using the input as well as output of models.
-- [**gpm**](http://www.terrame.org/packages/doc/gpm/doc/index.html): Create geospatial data as well as neighbourhood files using connectivity networks such as roads.
+- [**ca**](./package/ca/index.md): Some cellular automata models.
+- [**logo**](./package/logo/index.md): Basic spatial agent-based models.
+- [**sci**](./package/sci/index.md): A small package with interpolation functions.
+- [**sysdyn**](./package/sysdyn/index.md): Examples using system dynamics models.
+- [**calibration**](./package/calibration/index.md): Functions to run a given model several times, as well as metrics to compute goodness-of-fit and to calibrate models using genetic algorithms.
+- [**publish**](./package/publish/index.md): Create webmap tools using the input as well as output of models.
+- [**gpm**](./package/gpm/index.md): Create geospatial data as well as neighbourhood files using connectivity networks such as roads.
 
 You can run examples directly in the graphical interface of TerraME. Click in the Desktop icon to open it in Windows or run “terrame” in the command line to open the graphical interface. From the graphical interface it is possible to see the documentation of each installed package.
 
@@ -78,7 +78,8 @@ Frequently asked questions are answered [here](https://github.com/TerraME/terram
 ## Papers and reports
 
 ---
-
+- Lemos, Cassia M.G.; Andrade, Pedro R. ; Rodrigues, Ricardo R. ; Hissa, Leticia ; Aguiar, Ana P. D. . [Combining regional to local restoration goals in the Brazilian Atlantic forest](https://link.springer.com/article/10.1007/s10113-021-01792-0). Regional Environmental Change, v. 21, p. 68, 2021.
+- Cássia Maria Gama Lemos; Líliam César de Castro Medeiros ; Kelly Ribeiro ; Rodrigo Avancini . [Agent-based model implemented using the TerraME framework to simulate the dynamic transmission of dengue fever](https://periodicos.ufmg.br/index.php/geografias/article/view/13459). Revista GEOgrafias, p. 85-98, 2017.
 - Bezerra et al. [New land-use change scenarios for Brazil: Refining global SSPs with a regional spatially-explicit allocation model](https://doi.org/10.1371/journal.pone.0256052). Plos one 17.4, 2022: e0256052.
 - Aguiar et al. [Land use change emission scenarios: anticipating a forest transition process in the Brazilian Amazon](https://doi.org/10.1111/gcb.13134). Global change biology, v. 22, n. 5, p. 1821-1840, 2016.
 - Aguiar et al. [Modeling the spatial and temporal heterogeneity of deforestation‐driven carbon emissions: the INPE‐EM framework applied to the Brazilian Amazon](https://doi.org/10.1111/j.1365-2486.2012.02782.x). Global Change Biology, v. 18, n. 11, p. 3346-3366, 2012.
