@@ -112,7 +112,7 @@ nav:
       - Example: 'package/gpm/types/examples.md'
       - Data: 'package/gpm/types/data.md'
   - Publish:
-    - Publish: 'package/publish/index.md'
+    - publish: 'package/publish/index.md'
     - Types:
       - Application: 'package/publish/types/application.md'
       - List: 'package/publish/types/list.md'
